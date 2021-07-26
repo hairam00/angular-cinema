@@ -21,9 +21,14 @@ export class HeaderComponent implements OnInit {
     this.sharedService.currentLocation.subscribe((location) => (this.city = location));
     this.sharedService.currentUser.subscribe((user) => (this.user = user));
     console.warn(localStorage.getItem('username'));
-    // if(localStorage.getItem('username') != null || localStorage.getItem('username') != ''){
-    //   this.user = localStorage.getItem('username') as string;
-    // }
+    if(localStorage.getItem('username') != null || localStorage.getItem('username') != ''){
+      this.user = localStorage.getItem('username') as string;
+      console.log("User from local storage" + localStorage.getItem('username'));
+    }
+    if(localStorage.getItem('username') == null || localStorage.getItem('username') == ''){
+      this.user = '';
+      console.log("no user in local storage" + localStorage.getItem('username'));
+    }
   }
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);

@@ -1,0 +1,279 @@
+<div class="bg">
+    <h1>Create Your Event</h1>
+    <div class="spacebarcenter"></div>
+    <div class="container">
+        <form class="form">
+            <table class="example-full-width">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Organizer's Name</mat-label>
+                            <input matInput placeholder="Enter Organizer's Name">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <table >
+                            <tr>
+                                <td>
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Select an option</mat-label>
+                                        <mat-select [(value)]="selected">
+                                          <mat-option>Code</mat-option>
+                                          <mat-option value="0300">0300</mat-option>
+                                          <mat-option value="0301">0301</mat-option>
+                                          <mat-option value="0302">0302</mat-option>
+                                          <mat-option value="0303">0303</mat-option>
+                                          <mat-option value="0304">0304</mat-option>
+                                          <mat-option value="0305">0305</mat-option>
+                                          <mat-option value="0306">0306</mat-option>
+                                          <mat-option value="0307">0307</mat-option>
+                                          <mat-option value="0308">0308</mat-option>
+                                          <mat-option value="0309">0309</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </td>
+                                <td>
+                                    <mat-form-field class="example-full-width" appearance="fill" style="width: 240%;">
+                                        <mat-label>Contact Number</mat-label>
+                                        <input matInput #postalCode maxlength="7" placeholder="0000000">
+                                        <mat-hint align="end">{{postalCode.value.length}} / 7</mat-hint>
+                                    </mat-form-field>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+                            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                              Please enter a valid email address
+                            </mat-error>
+                            <mat-error *ngIf="emailFormControl.hasError('required')">
+                              Email is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Event Title</mat-label>
+                            <input matInput placeholder="Event Title">
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Venue</mat-label>
+                            <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" placeholder="M.R Kyani Rd, KArachi" ></textarea>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field appearance="fill" style="width: 100%;">
+                            <mat-label>Select an option</mat-label>
+                            <mat-select [(value)]="selected">
+                              <mat-option>None</mat-option>
+                              <mat-option value="Lahore">Lahore</mat-option>
+                              <mat-option value="Islamabad">Islamabad</mat-option>
+                              <mat-option value="Karachi">Karachi</mat-option>
+                              <mat-option value="Multan">Multan</mat-option>
+                              <mat-option value="Peshawar">Peshawar</mat-option>
+                              <mat-option value="Faisalabad">Faisalabad</mat-option>
+                              <mat-option value="Rawalpindi">Rawalpindi</mat-option>
+                              <mat-option value="Murree">Murree</mat-option>
+                              <mat-option value="Kashnir">Kashnir</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+            <table id="myTable">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker">
+                            <mat-datepicker-toggle matSuffix [for]="picker">
+                              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Start Time</mat-label>
+                            <input matInput placeholder="2:15 PM">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>End Time</mat-label>
+                            <input matInput placeholder="3:15 PM">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Details</mat-label>
+                            <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" placeholder="Please Share any specific requirnments"></textarea>
+                        </mat-form-field>
+                    </td>
+                    
+                </tr>
+                <tr *ngFor="let field of fieldArray; let i = index">
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker">
+                            <mat-datepicker-toggle matSuffix [for]="picker">
+                              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Start Time</mat-label>
+                            <input matInput placeholder="2:15 PM">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>End Time</mat-label>
+                            <input matInput placeholder="3:15 PM">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Details</mat-label>
+                            <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" placeholder="Please Share any specific requirnments"></textarea>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <button mat-raised-button color="warn" (click)="deleteRow(i)">X</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="addMore" mat-raised-button color="primary" (click)="addRow()">Add More</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>*If more date/time is required, please click on Add More.</p>
+                    </td>
+                </tr>
+            </table>
+            <div class="dflex">
+                <div class="col">
+                    <label for="Ticket Type">Event Type</label> <br>
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button value="1">Ticketed Event</mat-radio-button> <br>
+                        <mat-radio-button value="2" #radioOne>Non-Ticketed Event</mat-radio-button> <br>
+                        <mat-radio-button value="2">Registrations</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col">
+                    <label for="Ticket Type">Ticket Type</label> <br>
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button value="1">E-tickets by Bookitnow.pk</mat-radio-button> <br>
+                        <mat-radio-button value="2">Printed tickets provided by organizer</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <table id="eventTable" *ngIf="!radioOne.checked" style="width: 100%;">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Ticket Category</mat-label>
+                            <input matInput placeholder="Ticket Category">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Ticket Price</mat-label>
+                            <input matInput type="number">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Details</mat-label>
+                            <textarea matInput placeholder="Please share any specific requirements e.g CNIC, Student id etc" cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" ></textarea>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <!-- removable rows -->
+                <tr *ngFor="let field of eventArray; let i = index">
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Ticket Category</mat-label>
+                            <input matInput placeholder="Ticket Category">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Ticket Price</mat-label>
+                            <input matInput type="number">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Details</mat-label>
+                            <textarea matInput placeholder="Please share any specific requirements e.g CNIC, Student id etc" cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" ></textarea>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <button mat-raised-button color="warn" (click)="deleteEvent(i)">X</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="addMore" mat-raised-button color="primary" (click)="addEvent()">Add More</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>*If more ticket categories or ticket price are required, please click on Add More.</p>
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Share your event page link</mat-label>
+                            <input matInput placeholder="Share your event page link">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Leave a message</mat-label>
+                            <textarea matInput placeholder="Leave a Message" cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <mat-label>Share your event page link</mat-label> <br>
+                        <input type="file"> <br>
+                        <p>*Upload image with resolution of 680x260px.</p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <hr>
+        <div class="terms">
+            <h4>Terms & Conditions:</h4>
+            <ul>
+                <li>15% commission on ticket registrations sales through Bookitnow.pk</li>
+                <li>Customer will be charged for the delivery</li>
+                <li>All sales will be reconciled after deducting commission two days after the event</li>
+                <li>Bookitnow.pk to be promoted on all marketing material (digital + printed)</li>
+                <li>For customized / additional services, sliders on home page, social media promotions or discussing terms + conditions, contact</li>
+            </ul>
+            <b>Call: </b>03331900916 / 03111222742 <br>
+            <b>Email id: </b>ask@bookitnow.pk
+        </div>
+    </div>
+</div>

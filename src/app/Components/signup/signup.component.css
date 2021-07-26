@@ -1,0 +1,8 @@
+.spacebar{
+    border: solid 1px #ca191f;
+    width: 50px;
+    margin-left: 40%;
+}
+mat-dialog-content h1{
+    margin-left: 20%;    
+}

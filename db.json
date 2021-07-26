@@ -1,0 +1,94 @@
+{
+  "newsletter": [
+    {
+      "id": 1,
+      "email": "hairamirshad@gmail.com",
+      "city": "Lahore"
+    },
+    {
+      "id": 2,
+      "email": "",
+      "city": ""
+    },
+    {
+      "id": 3,
+      "email": "",
+      "city": ""
+    },
+    {
+      "id": 4,
+      "email": "",
+      "city": ""
+    },
+    {
+      "id": 5,
+      "email": "hairamirshad@gmail.com",
+      "city": "Lahore"
+    },
+    {
+      "id": 6,
+      "email": "hairamirshad@gmail.com",
+      "city": "Islamabad"
+    }
+  ],
+  "whatsapp": [
+    {
+      "id": 1,
+      "number": "4277187",
+      "city": "Lahore",
+      "movies": true,
+      "events": false,
+      "blogs": false
+    },
+    {
+      "id": 2,
+      "number": "4277187",
+      "city": "Lahore",
+      "movies": false,
+      "events": false,
+      "blogs": false
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Hairam Irshad",
+      "email": "hairamirshad@gmail.com",
+      "code": "0301",
+      "number": "4277187",
+      "password": "hairam123"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "firstname": "Hairam",
+      "lastname": "Irshad",
+      "email": "hairamirshad@gmail.com",
+      "code": "0300",
+      "number": "4277187",
+      "subject": "Feedback",
+      "message": "Its really awesome"
+    },
+    {
+      "id": 2,
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "code": "",
+      "number": "",
+      "subject": "",
+      "message": ""
+    },
+    {
+      "id": 3,
+      "firstname": "Hairam",
+      "lastname": "Irshad",
+      "email": "hairamirshad@gmail.com",
+      "code": "0301",
+      "number": "4277187",
+      "subject": "Feedback",
+      "message": "i am facing problem regarding order tracking"
+    }
+  ]
+}

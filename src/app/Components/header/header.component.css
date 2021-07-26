@@ -1,0 +1,35 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+}
+header a{
+    margin: 1px 8px 0 0;
+}
+.logo-section{
+    display: flex;
+    border-bottom: solid 1px #eceaea;
+    width: 40%;
+}
+.login{
+    width: 35%;
+    border-bottom: solid 1px #eceaea;
+}
+.login a:first-child{
+    margin-left: 45%;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.nav img{
+    margin-top: -10%;
+    width: 100%;
+    height: 100%;
+    margin-left: -18%;
+}
+.subnav button{
+    margin: 8px 8px 8px 0;
+}

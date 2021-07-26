@@ -1,0 +1,68 @@
+footer{
+    background-color: #282828;
+    color: #ccc;
+    padding-top: 5%;
+}
+.dflex{
+    display: flex;
+    justify-content: space-around;
+}
+.col a{
+    display: block;
+}
+.col img{
+    display: block;
+    height: 10%;
+    margin-bottom: 5%;
+}
+.col a:hover{
+    color: #3f51b5;
+    transition: ease-in-out 0.5s;
+}
+.col h4{
+    color: #eaeaec;
+}
+.copyright span{
+    color: #3f51b5;
+}
+hr{
+    border: solid 1px #333;
+}
+.socials i:hover {
+    color: #3f51b5;
+    transition: ease-in-out 0.5s;
+}
+.newsletter{
+    width: 50%;
+    background-color: #f0f0f2;
+    padding: 25px 0 25px 25px;
+    /* float: left; */
+}
+.whatsapp{
+    height: 240px;
+    background-color: #d9e8eb;
+    width: 50%;
+    float: right;
+    margin-top: -17.8%;
+    padding: 25px 0 25px 25px;
+}
+.whatsapp mat-checkbox{
+    padding: 0 5px;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+.example-full-width {
+    width: 100%;
+}
+td {
+    padding-right: 8px;
+}
+.form{
+    position: relative;
+    bottom: 0;
+    top: 0;
+    margin-bottom: -5%;
+}

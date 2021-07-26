@@ -1,0 +1,65 @@
+<h2 mat-dialog-title>Sign Up</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="container">
+        <img src="../../../assets/logo.png" alt="logo">
+        <h1>Join bookitnow.pk</h1>
+        <div class="spacebar"></div>
+        <br>
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill" style="width: 100%;">
+                <mat-label>Full Name</mat-label>
+                <input matInput type="text" [(ngModel)]="users.name" name="name" id="name" required>
+                <mat-label *ngIf="nameError">{{nameError}}</mat-label>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill" style="width:100%;">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com" [(ngModel)]="users.email" name="email" id="email" required>
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Select an option</mat-label>
+                            <mat-select [(value)]="selected" [(ngModel)]="users.code" name="code" id="code" required>
+                              <mat-option>Code</mat-option>
+                              <mat-option value="0300">0300</mat-option>
+                              <mat-option value="0301">0301</mat-option>
+                              <mat-option value="0302">0302</mat-option>
+                              <mat-option value="0303">0303</mat-option>
+                              <mat-option value="0304">0304</mat-option>
+                              <mat-option value="0305">0305</mat-option>
+                              <mat-option value="0306">0306</mat-option>
+                              <mat-option value="0307">0307</mat-option>
+                              <mat-option value="0308">0308</mat-option>
+                              <mat-option value="0309">0309</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Contact Number</mat-label>
+                            <input matInput #postalCode maxlength="7" placeholder="0000000" [(ngModel)]="users.number" name="number" id="number" required>
+                            <mat-hint align="end">{{postalCode.value.length}} / 7</mat-hint>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+            <mat-form-field class="example-full-width" appearance="fill" style="width: 100%;">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" [(ngModel)]="users.password" name="password" id="password" required>
+            </mat-form-field>
+            <p>Already a member?  <button mat-button color="primary" (click)="signIn()" >Sign in Now</button> </p>
+          </form>
+        <br>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="false">Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary" (click)="createProduct()">Sign Up</button>
+</mat-dialog-actions>

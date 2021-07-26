@@ -1,0 +1,43 @@
+.dflex{
+    display: flex;
+    justify-content: space-between;
+}
+.spacebar{
+    border-bottom: 3px solid #ca191f;
+    width: 50px;
+}
+.spacebarcenter{
+    border-bottom: 3px solid #ca191f;
+    width: 50px;
+    margin-left: 25%;
+}
+ h1{
+    font-size: 36px;
+}
+h2{
+    font-size: 24px;
+}
+.information td{
+    padding: 20px;
+}
+.contactUs{
+    width: 60%;
+}
+.contactUs h1:first-child{
+    margin-left: 20%;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+.example-full-width {
+    width: 100%;
+}
+td {
+    padding-right: 8px;
+}
+button{
+    padding: 5px 50px;
+    float: right;
+}

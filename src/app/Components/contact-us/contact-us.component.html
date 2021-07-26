@@ -1,0 +1,109 @@
+<section class="container dflex">
+    <div class="information">
+        <h1>information</h1>
+        <div class="spacebar"></div>
+        <table>
+            <tr>
+                <td><img src="../../../assets/outline_local_phone_black_24dp.png" alt=""></td>
+                <td>+92 311 1222742</td>
+            </tr>
+            <tr>
+                <td><img src="../../../assets/outline_local_post_office_black_24dp.png" alt=""></td>
+                <td>ask@bookitnow.pk</td>
+            </tr>
+            <tr>
+                <td><img src="../../../assets/outline_language_black_24dp.png" alt=""></td>
+                <td><a routerLink="">www.bookitnow.pk</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="contactUs">
+        <h1>Contact Us</h1>
+        <div class="spacebarcenter"></div>
+        <h2>Send Us Your Message</h2>
+        <div class="spacebar"></div>
+        <br>
+        <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>First name</mat-label>
+                            <input matInput [(ngModel)]="messageContact.firstname" name="firstname" id="firstname">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Last name</mat-label>
+                            <input matInput [(ngModel)]="messageContact.lastname" name="lastname" id="lastname">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com" [(ngModel)]="messageContact.email" name="contactemail" id="contactemail">
+                            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                              Please enter a valid email address
+                            </mat-error>
+                            <mat-error *ngIf="emailFormControl.hasError('required')">
+                              Email is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Select an option</mat-label>
+                            <mat-select [(value)]="selected" [(ngModel)]="messageContact.code" name="code" id="code">
+                              <mat-option>Code</mat-option>
+                              <mat-option value="0300">0300</mat-option>
+                              <mat-option value="0301">0301</mat-option>
+                              <mat-option value="0302">0302</mat-option>
+                              <mat-option value="0303">0303</mat-option>
+                              <mat-option value="0304">0304</mat-option>
+                              <mat-option value="0305">0305</mat-option>
+                              <mat-option value="0306">0306</mat-option>
+                              <mat-option value="0307">0307</mat-option>
+                              <mat-option value="0308">0308</mat-option>
+                              <mat-option value="0309">0309</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Contact Number</mat-label>
+                            <input matInput #postalCode maxlength="7" placeholder="0000000" [(ngModel)]="messageContact.number" name="contactnumber" id="contactnumber">
+                            <mat-hint align="end">{{postalCode.value.length}} / 7</mat-hint>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Subject</mat-label>
+                            <input matInput [(ngModel)]="messageContact.subject" name="subject" id="subject">
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <p>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                              <mat-label>Message</mat-label>
+                              <textarea matInput placeholder="Type your message here" [(ngModel)]="messageContact.message" name="message" id="message"></textarea>
+                            </mat-form-field>
+                          </p>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button mat-raised-button color="primary" (click)="createMessage()">SEND</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</section>

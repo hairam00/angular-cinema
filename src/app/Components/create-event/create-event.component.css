@@ -1,0 +1,58 @@
+h1{
+    font-size: 36px;
+}
+.bg{
+    background: url(../../../assets/texture-bw.png);
+    padding-top: 5%;
+    text-align: center;
+}
+.container{
+    background-color: #f4f4f4 ;
+    color: #575757;
+    margin-left: 10%;
+    padding-bottom: 5%;
+    margin-bottom: 0%;
+}
+.spacebarcenter{
+    border: solid 2px #ca191f;
+    width: 5%;
+    display: inline-block;
+}
+.form {
+    padding: 5% 2%;
+    width: 100%;
+}
+.example-full-width {
+    width: 100%;
+}
+td {
+    padding-right: 8px;
+}
+#myTable{
+    width: 99%;
+}
+#addMore{
+    float: left;
+}
+p{
+    display: block;
+    float: left;
+    color: red;
+    font-size: 10px;
+}
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+.example-radio-button {
+    margin: 5px;
+}
+.dflex{
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+.terms{
+    text-align: left;
+}

@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>LogIn</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="container">
+        <img src="../../../assets/logo.png" alt="logo">
+        <h1>Login</h1>
+        <div class="spacebar"></div>
+        <br>
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill" style="width: 90%;">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com" [(ngModel)]="email" name="email" id="email" required>
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" appearance="fill" style="width: 90%;">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" [(ngModel)]="password" name="password" id="password" required>
+                </mat-form-field>
+            <p>Forgot your Password???</p>
+            <p>Not a member? <button mat-button color="primary" (click)="signupDialog()">Sign up now</button> </p>
+          </form>
+        <br>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="false">Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary" (click)="login()">Login</button>
+</mat-dialog-actions>

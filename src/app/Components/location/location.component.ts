@@ -19,6 +19,7 @@ export class LocationComponent implements OnInit {
     var value = idAttr.nodeValue;
     console.log(value);
     this.sharedService.changeLocation(value);
+    localStorage.setItem("City", value);
     this.dialog.closeAll();
   }
   

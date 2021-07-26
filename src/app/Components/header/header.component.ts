@@ -29,6 +29,15 @@ export class HeaderComponent implements OnInit {
       this.user = '';
       console.log("no user in local storage" + localStorage.getItem('username'));
     }
+    // location
+    if(localStorage.getItem('City') != null || localStorage.getItem('City') != ''){
+      this.city = localStorage.getItem('City') as string;
+      console.log("User from local storage" + localStorage.getItem('City'));
+    }
+    if(localStorage.getItem('City') == null || localStorage.getItem('City') == ''){
+      this.city = 'City';
+      console.log("no user in local storage" + localStorage.getItem('City'));
+    }
   }
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);
@@ -63,7 +72,8 @@ export class HeaderComponent implements OnInit {
   }
   logout(){
     this.user = '';
-    this.openSnackBar("Logged Out!", "x");
     localStorage.clear();
+    this.city = 'City';
+    this.openSnackBar("Logged Out!", "x");
   }
 }

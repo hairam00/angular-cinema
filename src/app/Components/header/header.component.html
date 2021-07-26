@@ -13,8 +13,8 @@
             </mat-menu>
             <a mat-button color="primary" (click)="location()" style="width: 17% !important; font-size: smaller;">
                 {{city}} 
-                <mat-icon *ngIf="city != ''" >location_searching</mat-icon>
-                <mat-icon *ngIf="city == ''"> location_on</mat-icon>
+                <mat-icon *ngIf="!city" >location_searching</mat-icon>
+                <mat-icon *ngIf="city"> location_on</mat-icon>
             </a>
         </div>
     </div>

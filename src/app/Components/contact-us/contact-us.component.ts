@@ -27,6 +27,7 @@ export class ContactUsComponent implements OnInit {
   constructor(private restService: RestService, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);
@@ -65,8 +66,9 @@ export class ContactUsComponent implements OnInit {
           },
           error => {
             console.log(error);
+            this.openSnackBar("Can't send Message due to internal error", "x");
           });
-      this.openSnackBar("Message Sent Successful", "X");
+      this.openSnackBar("Message Sent Successful", "x");
     }
   }
 }

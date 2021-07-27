@@ -1,0 +1,48 @@
+<div class="cover" style="background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('../../../assets/{{data.image}}');">
+    <mat-icon class="play">play_circle_outline</mat-icon>
+    
+</div>
+<div class="dflex">
+    <div class="imgbar">
+        <img src="../../../assets/{{data.image}}" >
+        <div class="box">
+            <p>No Show Time yet</p>
+        </div>
+        <p>Reserve Your Seat Now</p>
+    </div>
+    <div class="tabs">
+        <h1>{{data.name}}</h1>
+        <span>{{data.country}}</span> <span>{{data.category}}</span> <br> 
+        <p>Relase Data {{data.relase_date}}</p>
+        <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="Summary">
+               <div class="containers">
+                <h4>SYNOPSIS</h4>
+                <h5>{{data.summary}}</h5>
+               </div>
+            </mat-tab>
+            <mat-tab label="User Reviews(0)">
+                <div class="containers">
+                   <h5> {{data.user_review}}</h5>
+                </div>
+            </mat-tab>
+            <mat-tab label="Critic Reviews(0)">
+                <div class="containers">
+                    <h5>{{data.critic}}</h5>
+                </div>
+            </mat-tab>
+            <mat-tab label="Featured Videos">
+                <div class="containers">
+                    <h5>{{data.videos}}</h5>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+    <div class="news"></div>
+</div>
+<div class="container">
+    <h1>NOW SHOWING</h1>
+    <hr> <br> <br>
+    <div class="button"><mat-icon>keyboard_arrow_left</mat-icon></div>
+    <div class="button"><mat-icon>keyboard_arrow_right</mat-icon></div>
+</div>

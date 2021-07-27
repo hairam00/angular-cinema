@@ -1,0 +1,70 @@
+.cover{
+    width: 100%;
+    height: 400px;
+    background-repeat: none;
+    background-size: cover;
+}
+.cover .play{
+    font-size: 100pt;
+    color: white;
+    margin-left: 40%;
+    margin-top: 10%;
+}
+.cover .play:hover{
+    cursor: pointer;
+}
+.dflex{
+    display: flex;
+    justify-content: space-around;
+}
+.imgbar, .tabs{
+    position: relative;
+    margin-top: -10%;
+}
+.imgbar img{
+    width: 200px;
+    height: 300px;
+    margin: 5% 0;
+}
+.box{
+    width: 200px;
+    color: white;
+    background-color: #ca191f;
+    padding: 2%;
+    text-align: center;
+}
+.tabs{
+    position: relative;
+    margin-top: -8%;
+    margin-left: -12%;
+}
+span{
+    border: solid 1px white;
+    margin: 2%;
+}
+span:hover{
+    color: #ca191f !important;
+    transition: ease-in-out 0.5s;
+}
+.tabs p, .tabs h1,.tabs span{
+    color: white;
+}
+mat-tab-group{
+    margin-top: 5%;
+    width: 800px;
+}
+.containers{
+    padding: 1%;
+}
+.button{
+    display: inline;
+    background-color:#dfdfdf;
+    padding: 2%;
+    margin: 50% 20%;
+    font-size: 20pt;
+}
+.button:hover{
+    background-color: #9e9e9e;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}

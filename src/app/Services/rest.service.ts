@@ -15,6 +15,7 @@ export class RestService {
   newsletterUrl : string = "http://localhost:3000/newsletter";
   whatsappUrl : string = "http://localhost:3000/whatsapp";
   contactUrl : string = "http://localhost:3000/contacts";
+  movieUrl: string = "http://localhost:3000/movies";
 
   // users sign up and login
   getUsers(){
@@ -37,5 +38,9 @@ export class RestService {
   // contacts us messages
   createMessage(mg: Message){
     return this.http.post(this.contactUrl, mg);
+  }
+  //movies
+  getMovie(id: string){
+    return this.http.get<any[]>(this.movieUrl+"?id="+id);
   }
 }

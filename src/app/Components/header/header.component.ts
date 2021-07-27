@@ -32,11 +32,11 @@ export class HeaderComponent implements OnInit {
     // location
     if(localStorage.getItem('City') != null || localStorage.getItem('City') != ''){
       this.city = localStorage.getItem('City') as string;
-      console.log("User from local storage" + localStorage.getItem('City'));
+      console.log("city from local storage" + localStorage.getItem('City'));
     }
     if(localStorage.getItem('City') == null || localStorage.getItem('City') == ''){
       this.city = 'City';
-      console.log("no user in local storage" + localStorage.getItem('City'));
+      console.log("no city in local storage" + localStorage.getItem('City'));
     }
   }
   //snackbar

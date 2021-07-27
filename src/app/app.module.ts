@@ -32,6 +32,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { DetailViewComponent } from './Components/detail-view/detail-view.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -48,6 +50,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     TrackingCodeComponent,
     LocationComponent,
     CreateEventComponent,
+    DetailViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,7 +75,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatGridListModule,
     BrowserModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

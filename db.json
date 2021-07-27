@@ -4,31 +4,6 @@
       "id": 1,
       "email": "hairamirshad@gmail.com",
       "city": "Lahore"
-    },
-    {
-      "id": 2,
-      "email": "",
-      "city": ""
-    },
-    {
-      "id": 3,
-      "email": "",
-      "city": ""
-    },
-    {
-      "id": 4,
-      "email": "",
-      "city": ""
-    },
-    {
-      "id": 5,
-      "email": "hairamirshad@gmail.com",
-      "city": "Lahore"
-    },
-    {
-      "id": 6,
-      "email": "hairamirshad@gmail.com",
-      "city": "Islamabad"
     }
   ],
   "whatsapp": [
@@ -37,14 +12,6 @@
       "number": "4277187",
       "city": "Lahore",
       "movies": true,
-      "events": false,
-      "blogs": false
-    },
-    {
-      "id": 2,
-      "number": "4277187",
-      "city": "Lahore",
-      "movies": false,
       "events": false,
       "blogs": false
     }
@@ -57,6 +24,68 @@
       "code": "0301",
       "number": "4277187",
       "password": "hairam123"
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "name": "The Conjuring: The devil made me do it",
+      "country": "HOLLYWOOD",
+      "category": "ACTION",
+      "summary": "A mythic and emotionally charged hero's journey, DUNE tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.—Warner Bros.",
+      "user_review": "",
+      "critic": "",
+      "videos": "",
+      "relase_date": "3rd September 2021",
+      "image": "CONJURING.jpg"
+    },
+    {
+      "id": 2,
+      "name": "TOM AND JERRY",
+      "country": "HOLLYWOOD",
+      "category": "FAMILY",
+      "summary": "A mythic and emotionally charged hero's journey, DUNE tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.—Warner Bros.",
+      "user_review": "",
+      "critic": "",
+      "videos": "",
+      "relase_date": "3rd September 2021",
+      "image": "tom&jerry.jpg"
+    },
+    {
+      "id": 3,
+      "name": "TENET",
+      "country": "HOLLYWOOD",
+      "category": "ACTION",
+      "summary": "A mythic and emotionally charged hero's journey, DUNE tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.—Warner Bros.",
+      "user_review": "",
+      "critic": "",
+      "videos": "",
+      "relase_date": "20th December 2021",
+      "image": "tenet.jpg"
+    },
+    {
+      "id": 4,
+      "name": "THE INVISIBLE MAN",
+      "country": "HOLLYWOOD",
+      "category": "HORROR",
+      "summary": "A mythic and emotionally charged hero's journey, DUNE tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.—Warner Bros.",
+      "user_review": "",
+      "critic": "",
+      "videos": "",
+      "relase_date": "20th December 2021",
+      "image": "invisibleMan.jpg"
+    },
+    {
+      "id": 5,
+      "name": "SONIC THE HEDGEHOG",
+      "country": "HOLLYWOOD",
+      "category": "ANIMATION",
+      "summary": "A mythic and emotionally charged hero's journey, DUNE tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.—Warner Bros.",
+      "user_review": "",
+      "critic": "",
+      "videos": "",
+      "relase_date": "20th December 2021",
+      "image": "sonic.jpg"
     }
   ],
   "contacts": [
@@ -72,16 +101,6 @@
     },
     {
       "id": 2,
-      "firstname": "",
-      "lastname": "",
-      "email": "",
-      "code": "",
-      "number": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": 3,
       "firstname": "Hairam",
       "lastname": "Irshad",
       "email": "hairamirshad@gmail.com",

@@ -15,6 +15,7 @@ export class AboutUsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
   signIn(){
     const dialogRef = this.dialog.open(LoginComponent);

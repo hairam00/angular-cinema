@@ -22,6 +22,7 @@ export class CreateEventComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
   addRow(){
     this.fieldArray.push(this.newAttribute)

@@ -1,31 +1,28 @@
 <!-- carousel -->
 <div class="container">
     <ngb-carousel>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
+        <ng-template ngbSlide >
+          <div class="picsum-img-wrapper" [routerLink]="['/movies', '1' ,'the-conjuring']">
             <img src="../../../assets/CONJURING-Cover.jpg">
           </div>
           <div class="carousel-caption">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>The Conjuring: The devil made me do it</h3>
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
+          <div class="picsum-img-wrapper" [routerLink]="['/movies', '6' ,'a-quite-place']">
             <img src="../../../assets/quiteplace.jpg">
           </div>
           <div class="carousel-caption">
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>A QUITE PLACE PART 2</h3>
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
+          <div class="picsum-img-wrapper" [routerLink]="['/movies', '7' ,'black-widow']">
             <img src="../../../assets/blackwidow.jpg">
           </div>
           <div class="carousel-caption">
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h3>BLACK WIDOW</h3>
           </div>
         </ng-template>
       </ngb-carousel>

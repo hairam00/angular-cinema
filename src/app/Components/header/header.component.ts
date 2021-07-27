@@ -39,6 +39,7 @@ export class HeaderComponent implements OnInit {
       console.log("no user in local storage" + localStorage.getItem('City'));
     }
   }
+  //snackbar
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);
   }

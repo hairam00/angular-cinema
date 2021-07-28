@@ -111,9 +111,7 @@ export class FooterComponent implements OnInit {
         this.whatsappForm.get('whatsappsCity')?.setValue('');
         this.whatsappForm.get('whatsappNumber')?.setValue(''); 
         this.whatsappForm.get('whatsappsCity')?.setValidators([Validators.required]);
-        this.whatsappForm.get('whatsappNumber')?.setValidators([Validators.required]);     
-        // this.whatsappForm.controls['whatsappsCity'].setValidators([Validators.required]);
-        // this.whatsappForm.controls['whatsappNumber'].setValidators([Validators.required]);     
+        this.whatsappForm.get('whatsappNumber')?.setValidators([Validators.required]);      
     }
     
   }

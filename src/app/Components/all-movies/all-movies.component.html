@@ -1,0 +1,69 @@
+<ngb-carousel>
+    <ng-template ngbSlide >
+      <div class="picsum-img-wrapper" [routerLink]="['/movies', '1' ,'the-conjuring']">
+        <img src="../../../assets/CONJURING-Cover.jpg">
+      </div>
+      <div class="carousel-caption">
+        <h3>The Conjuring: The devil made me do it</h3>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper" [routerLink]="['/movies', '6' ,'a-quite-place']">
+        <img src="../../../assets/quiteplace.jpg">
+      </div>
+      <div class="carousel-caption">
+        <h3>A QUITE PLACE PART 2</h3>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper" [routerLink]="['/movies', '7' ,'black-widow']">
+        <img src="../../../assets/blackwidow.jpg">
+      </div>
+      <div class="carousel-caption">
+        <h3>BLACK WIDOW</h3>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <!-- all movies -->
+  <div class="bg">
+    <div class="container">
+        <mat-grid-list cols="4" rowHeight="2:3">
+            <mat-grid-tile *ngFor="let item of movies">
+                <!-- <a  [routerLink]="['/movies', 'user.id' ,'the-conjuring']"> -->
+                <div class="container" >
+                    <img src="../../../assets/{{item.image}}">
+                    <h3>{{item.name}}</h3>
+                </div>
+            <!-- </a> -->
+            </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+  </div>
+  <!-- now showing -->
+  <div class="container">
+      <h1>NOW SHOWING</h1>
+      <hr>
+      <carousel>
+        <div class="carousel-cell">
+            <img src="../../../assets/CONJURING.jpg" id="1" name="the-conjuring" #movie1 (click)="reload(movie1.id,movie1.name)">
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/tom&jerry.jpg" id="2" name="tom-and-jerry" #movie2 (click)="reload(movie2.id,movie2.name)">
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/tenet.jpg" id="3" name="tenet" #movie3 (click)="reload(movie3.id,movie3.name)">
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/invisibleMan.jpg" id="4" name="invisible-man" #movie4 (click)="reload(movie4.id,movie4.name)">
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/sonic.jpg" id="5" name="sonic" #movie5 (click)="reload(movie5.id,movie5.name)">
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/quiteplace2.jpg" id="6" name="quite-place-2" #movie6 (click)="reload(movie6.id,movie6.name)">
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/blackwidows.jfif" id="7" name="black-widow" #movie7 (click)="reload(movie7.id,movie7.name)">
+        </div>        
+    </carousel>
+  </div>

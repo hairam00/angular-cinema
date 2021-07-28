@@ -12,9 +12,7 @@
             <button mat-menu-item (click)="logout()">Sign out</button>
             </mat-menu>
             <a mat-button color="primary" (click)="location()" style="width: 17% !important; font-size: smaller;">
-                {{city}} 
-                <mat-icon *ngIf="city != ''" >location_searching</mat-icon>
-                <mat-icon *ngIf="city == ''"> location_on</mat-icon>
+                {{city}} <mat-icon> location_on</mat-icon>
             </a>
         </div>
     </div>
@@ -23,7 +21,7 @@
             <button mat-stroked-button color="primary" style="margin-left: 8px;">Events</button>
             <button mat-stroked-button  color="primary" [matMenuTriggerFor]="movieMenu">Movies <i class="material-icons">arrow_drop_down</i></button>
             <mat-menu #movieMenu="matMenu">
-                <button mat-menu-item>All Movies</button>
+                <button mat-menu-item [routerLink]="['/all-movies']">All Movies</button>
                 <button mat-menu-item>Comming Soon</button>
                 <button mat-menu-item>Cinemas</button>
                 <button mat-menu-item>Now Showing</button>

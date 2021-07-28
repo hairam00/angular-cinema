@@ -1,0 +1,14 @@
+.picsum-img-wrapper img{
+    width: 100%;
+}
+.bg{
+    background: url(../../../assets/texture-bw.png);
+}
+mat-grid-tile img{
+    height: 80%;
+    width: 100%;
+    padding: 0;
+}
+mat-grid-tile h3{
+    text-align: center;
+}

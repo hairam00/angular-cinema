@@ -31,7 +31,7 @@
 <div class="container">
   <div class="featured-header space-between">
     <h1>POPULAR MOVIES</h1>
-    <button mat-flat-button color="primary">View All Movies</button>
+    <button mat-flat-button color="primary" [routerLink]="['/all-movies']" >View All Movies</button>
   </div> <br>
   <div class="cards">
     <mat-card class="example-card" [routerLink]="['/movies', '1' ,'the-conjuring']" routerLinkActive="router-link-active" >

@@ -43,4 +43,7 @@ export class RestService {
   getMovie(id: string){
     return this.http.get<any[]>(this.movieUrl+"?id="+id);
   }
+  getMovies(){
+    return this.http.get<any[]>(this.movieUrl);
+  }
 }

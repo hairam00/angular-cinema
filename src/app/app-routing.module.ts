@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
+import { AllMoviesComponent } from './Components/all-movies/all-movies.component';
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { CreateEventComponent } from './Components/create-event/create-event.component';
 import { DetailViewComponent } from './Components/detail-view/detail-view.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path:'about', component: AboutUsComponent},
   {path: 'contact', component: ContactUsComponent},
   {path: 'create-event', component: CreateEventComponent},
+  {path: 'all-movies', component: AllMoviesComponent},
   {path: 'movies/:id/:name', component: DetailViewComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full' }
 ];

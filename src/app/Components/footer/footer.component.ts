@@ -11,6 +11,7 @@ import { RestService } from 'src/app/Services/rest.service';
 export class FooterComponent implements OnInit {
   whatsappCity = 'option2';
   newsLetterCity = 'option2';
+  
   whatsappForm = new FormGroup({
     showTimes : new FormControl('',[]),
     upcoming : new FormControl('',[]),
@@ -31,7 +32,7 @@ export class FooterComponent implements OnInit {
       Validators.required
     ])  
   });
-  
+
   newsLetter = {
     id: 0,
     email: '',
@@ -80,7 +81,6 @@ export class FooterComponent implements OnInit {
         this.newsForm.controls['newsCity'].setValidators([Validators.required]);
         this.newsForm.controls['emailFormControl'].setValidators([Validators.required]);     
     }
-    
   }
   createWhatsapp(formDirective: FormGroupDirective){
     const whatsappData = {
@@ -113,7 +113,5 @@ export class FooterComponent implements OnInit {
         this.whatsappForm.get('whatsappsCity')?.setValidators([Validators.required]);
         this.whatsappForm.get('whatsappNumber')?.setValidators([Validators.required]);      
     }
-    
   }
-
 }

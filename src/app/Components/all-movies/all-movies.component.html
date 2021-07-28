@@ -29,12 +29,10 @@
     <div class="container">
         <mat-grid-list cols="4" rowHeight="2:3">
             <mat-grid-tile *ngFor="let item of movies">
-                <!-- <a  [routerLink]="['/movies', 'user.id' ,'the-conjuring']"> -->
-                <div class="container" >
+                <div class="container" [routerLink]="['/movies', item.id ,item.name]">
                     <img src="../../../assets/{{item.image}}">
                     <h3>{{item.name}}</h3>
                 </div>
-            <!-- </a> -->
             </mat-grid-tile>
         </mat-grid-list>
       </div>

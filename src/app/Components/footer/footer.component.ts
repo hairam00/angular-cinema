@@ -15,6 +15,15 @@ export class FooterComponent implements OnInit {
     Validators.required,
     Validators.email,
   ]);
+  newsCity = new FormControl('', [
+    Validators.required
+  ]);
+  whatsappsCity = new FormControl('',[
+    Validators.required
+  ]);
+  whatsappNumber = new FormControl('',[
+    Validators.required
+  ]);
   newsLetter = {
     id: 0,
     email: '',

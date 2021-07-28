@@ -29,13 +29,19 @@
                     <td>
                         <mat-form-field class="example-full-width" appearance="fill">
                             <mat-label>First name</mat-label>
-                            <input matInput [(ngModel)]="messageContact.firstname" name="firstname" id="firstname">
+                            <input matInput [(ngModel)]="messageContact.firstname" name="firstname" id="firstname" [formControl]="firstNameControl">
+                            <mat-error *ngIf="firstNameControl.hasError('required')">
+                                First Name is <strong>required</strong>
+                            </mat-error>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field class="example-full-width" appearance="fill">
                             <mat-label>Last name</mat-label>
-                            <input matInput [(ngModel)]="messageContact.lastname" name="lastname" id="lastname">
+                            <input matInput [(ngModel)]="messageContact.lastname" name="lastname" id="lastname" [formControl]="lastNameControl">
+                            <mat-error *ngIf="lastNameControl.hasError('required')">
+                                Last Name is <strong>required</strong>
+                              </mat-error>
                         </mat-form-field>
                     </td>
                     <td>
@@ -55,7 +61,7 @@
                     <td>
                         <mat-form-field appearance="fill">
                             <mat-label>Select an option</mat-label>
-                            <mat-select [(value)]="selected" [(ngModel)]="messageContact.code" name="code" id="code">
+                            <mat-select [(value)]="selected" [(ngModel)]="messageContact.code" name="code" id="code" [formControl]="contactCodeControl">
                               <mat-option>Code</mat-option>
                               <mat-option value="0300">0300</mat-option>
                               <mat-option value="0301">0301</mat-option>
@@ -68,19 +74,26 @@
                               <mat-option value="0308">0308</mat-option>
                               <mat-option value="0309">0309</mat-option>
                             </mat-select>
+                            <mat-error *ngIf="contactCodeControl.hasError('required')">
+                                Contact Code is <strong>required</strong>
+                            </mat-error>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field class="example-full-width" appearance="fill">
                             <mat-label>Contact Number</mat-label>
-                            <input matInput #postalCode maxlength="7" placeholder="0000000" [(ngModel)]="messageContact.number" name="contactnumber" id="contactnumber">
+                            <input matInput #postalCode maxlength="7" placeholder="0000000" [(ngModel)]="messageContact.number" name="contactnumber" id="contactnumber" [formControl]="contactControl">
                             <mat-hint align="end">{{postalCode.value.length}} / 7</mat-hint>
+                            <mat-error *ngIf="contactControl.hasError('required')">
+                                Contact Number is <strong>required</strong>
+                            </mat-error>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field class="example-full-width" appearance="fill">
                             <mat-label>Subject</mat-label>
                             <input matInput [(ngModel)]="messageContact.subject" name="subject" id="subject">
+                            
                         </mat-form-field>
                     </td>
                 </tr>
@@ -89,7 +102,10 @@
                         <p>
                             <mat-form-field class="example-full-width" appearance="fill">
                               <mat-label>Message</mat-label>
-                              <textarea matInput placeholder="Type your message here" [(ngModel)]="messageContact.message" name="message" id="message"></textarea>
+                              <textarea matInput placeholder="Type your message here" [(ngModel)]="messageContact.message" name="message" id="message" [formControl]="messageControl"></textarea>
+                              <mat-error *ngIf="messageControl.hasError('required')">
+                                Message is <strong>required</strong>
+                            </mat-error>
                             </mat-form-field>
                           </p>
                         

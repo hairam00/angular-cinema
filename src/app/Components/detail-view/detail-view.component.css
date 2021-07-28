@@ -56,15 +56,12 @@ mat-tab-group{
 .containers{
     padding: 1%;
 }
-.button{
-    display: inline;
-    background-color:#dfdfdf;
-    padding: 2%;
-    margin: 50% 20%;
-    font-size: 20pt;
+.bg{
+    margin-top: 15%;
+    background-color: #dfdfdf;
+    padding-bottom: 1%;
+    padding-top: 0.1%;
 }
-.button:hover{
-    background-color: #9e9e9e;
-    transition: ease-in-out 0.5s;
-    cursor: pointer;
-}
+/* .bg carousel{
+
+}  */

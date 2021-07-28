@@ -20,7 +20,7 @@
             <td>
                 <mat-form-field appearance="fill">
                     <mat-label>Select an option</mat-label>
-                    <mat-select [(value)]="newsLetterCity" [(ngModel)]="newsLetter.city" name="city" id="city">
+                    <mat-select [(value)]="newsLetterCity" [(ngModel)]="newsLetter.city" name="city" id="city" [formControl]="newsCity">
                       <mat-option>None</mat-option>
                       <mat-option value="Lahore">Lahore</mat-option>
                       <mat-option value="Islamabad">Islamabad</mat-option>
@@ -32,6 +32,9 @@
                       <mat-option value="Murree">Murree</mat-option>
                       <mat-option value="Kashnir">Kashnir</mat-option>
                     </mat-select>
+                    <mat-error *ngIf="newsCity.hasError('required')">
+                        City is <strong>required</strong>
+                      </mat-error>
                   </mat-form-field>
             </td>
             <td>
@@ -51,7 +54,7 @@
                 <td>
                     <mat-form-field appearance="fill">
                         <mat-label>Select an option</mat-label>
-                        <mat-select [(value)]="whatsappCity" [(ngModel)]="whatsapp.city" name="city" id="city">
+                        <mat-select [(value)]="whatsappCity" [(ngModel)]="whatsapp.city" name="city" id="city" [formControl]="whatsappsCity">
                           <mat-option>None</mat-option>
                           <mat-option value="Lahore">Lahore</mat-option>
                           <mat-option value="Islamabad">Islamabad</mat-option>
@@ -63,13 +66,19 @@
                           <mat-option value="Murree">Murree</mat-option>
                           <mat-option value="Kashnir">Kashmir</mat-option>
                         </mat-select>
+                        <mat-error *ngIf="whatsappsCity.hasError('required')">
+                            City is <strong>required</strong>
+                          </mat-error>
                       </mat-form-field>
                 </td>
                 <td>
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Your Number</mat-label>
-                        <input matInput #postalCode maxlength="11" placeholder="Your Number" [(ngModel)]="whatsapp.number" name="number" id="number">
+                        <input matInput #postalCode maxlength="11" placeholder="Your Number" [(ngModel)]="whatsapp.number" name="number" id="number" [formControl]="whatsappNumber">
                         <mat-hint align="end">{{postalCode.value.length}} / 11</mat-hint>
+                        <mat-error *ngIf="whatsappNumber.hasError('required')">
+                            Whatsapp Number is <strong>required</strong>
+                          </mat-error>
                       </mat-form-field>
                 </td>
                 <td>

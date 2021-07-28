@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RestService } from 'src/app/Services/rest.service';
 
 @Component({
@@ -8,22 +8,22 @@ import { RestService } from 'src/app/Services/rest.service';
   styleUrls: ['./detail-view.component.css']
 })
 export class DetailViewComponent implements OnInit {
-  name: string = '';
-  id: string = '';
+  movieId: string = '';
   data: any;
-  constructor(private route: ActivatedRoute, private restService:RestService) { }
-
+  constructor(private route: ActivatedRoute, private restService:RestService, private router: Router) { }
+  
   ngOnInit(): void {
-    this.name = this.route.snapshot.params.name;
-    this.id = this.route.snapshot.params.id;
-    console.log(this.name);
+    this.movieId = this.route.snapshot.params.id;
     window.scrollTo(0, 0);
 
-    this.restService.getMovie(this.id).subscribe(resp =>{
+    this.restService.getMovie(this.movieId).subscribe(resp =>{
       this.data = resp[0];
       console.log(resp[0]);
       this.data = resp[0];
       console.log(this.data);
+      if(this.data.summary == '' ){
+        this.data.summary = 'No synopsis found for this movie yet.';
+      } 
       if(this.data.user_review == '' ){
         this.data.user_review = 'No users have reviewed this movie yet.';
       } 
@@ -33,8 +33,12 @@ export class DetailViewComponent implements OnInit {
       if(this.data.videos == ''){
         this.data.videos = "No Video Found yet.";
       }
+    });     
+  }
+  reload(movieId:string, movieName:string){
+    this.router.navigate(['/movies',movieId,movieName])
+    .then(() => {
+    this.ngOnInit();
     });
-   
-        
   }
 }

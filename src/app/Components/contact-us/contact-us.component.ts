@@ -10,9 +10,24 @@ import { RestService } from 'src/app/Services/rest.service';
 })
 export class ContactUsComponent implements OnInit {
   selected = 'code';
+  firstNameControl = new FormControl('',[
+    Validators.required
+  ]);
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
+  ]);
+  lastNameControl = new FormControl('',[
+    Validators.required
+  ]);
+  contactCodeControl = new FormControl('',[
+    Validators.required
+  ]);
+  contactControl = new FormControl('',[
+    Validators.required
+  ]);
+  messageControl = new FormControl('',[
+    Validators.required
   ]);
   messageContact = {
     id: 0,

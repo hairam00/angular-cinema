@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from 'src/app/Services/rest.service';
-import { Users } from 'src/app/Classes/users';
 
 
 @Component({
@@ -15,7 +14,4 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
     window.scrollTo(0, 0);
   }
-  
-
-
 }

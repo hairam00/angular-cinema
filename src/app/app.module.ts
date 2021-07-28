@@ -34,8 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { DetailViewComponent } from './Components/detail-view/detail-view.component';
 import {MatTabsModule} from '@angular/material/tabs';
-
-
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -76,7 +75,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     BrowserModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatTabsModule
+    MatTabsModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

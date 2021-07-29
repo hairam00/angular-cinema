@@ -28,6 +28,7 @@ movies: any;
   getMovieCategory(release: string){
     if(release == 'All'){
       this.getMovies();
+      this.openSnackBar("ALl Movies","x");
     }else{
       this.restService.getMovieRelease(release).subscribe(res => {
         this.movies = res;

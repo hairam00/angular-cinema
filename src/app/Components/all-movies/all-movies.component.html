@@ -31,7 +31,7 @@
         <hr>
         <mat-grid-list cols="4" rowHeight="2:3">
             <mat-grid-tile *ngFor="let item of movies">
-                <div class="container" [routerLink]="['/movies', item.id ,item.name]">
+                <div class="container mat-grid-tile" [routerLink]="['/movies', item.id ,item.name]">
                     <img src="../../../assets/{{item.image}}">
                     <h3>{{item.name}}</h3>
                 </div>

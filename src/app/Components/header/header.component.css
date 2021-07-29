@@ -24,6 +24,9 @@ header a{
 header table tr:first-child{
     border-bottom: solid 1px #eceaea
 }
+header table tr:last-child{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
 button{
     margin: 8px 8px 8px 0;
 }

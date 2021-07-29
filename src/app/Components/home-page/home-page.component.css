@@ -3,12 +3,13 @@
     justify-content: space-around;
 }
 .cards img{
-    width: 200px;
-    height: 111% ;
+    width: 125%;
+    height: 115% ;
     border-radius: 4px;
 }
 .example-card {
     max-width: 200px;
+    margin: 1%;
 }
 .overlay {
     position: absolute;

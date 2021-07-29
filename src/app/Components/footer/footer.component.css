@@ -32,19 +32,29 @@ hr{
     color: #3f51b5;
     transition: ease-in-out 0.5s;
 }
+.form{
+    display: flex;
+    height: auto;
+}
 .newsletter{
     width: 50%;
+    height: 100%;
+    max-width: 50%;
+    min-width: 50%;
     background-color: #f0f0f2;
-    padding: 25px 0 25px 25px;
-    /* float: left; */
+    padding: 3% 0 3% 3%;
+    word-wrap: break-word; 
+    overflow: auto;
 }
 .whatsapp{
-    height: 240px;
+    height: 100%;
     background-color: #d9e8eb;
     width: 50%;
-    float: right;
-    margin-top: -17.8%;
-    padding: 25px 0 25px 25px;
+    max-width: 50%;
+    min-width: 50%;
+    overflow: auto;
+    padding: 3% 0 4.3% 3%;
+    word-wrap: break-word;
 }
 .whatsapp mat-checkbox{
     padding: 0 5px;

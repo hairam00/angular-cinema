@@ -1,3 +1,6 @@
+header{
+    z-index: 2;
+}
 header table{
     width: 100%;
 }

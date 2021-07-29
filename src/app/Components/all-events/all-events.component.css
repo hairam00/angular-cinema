@@ -1,0 +1,41 @@
+.bg{
+    background-color: #d9e8eb;
+}
+.container{
+    margin-top: 0.7%;
+    padding: 5% 0;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cards .card{
+    width: 32%;
+    margin: 0.5%;
+}
+.cards .card:hover{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    transition: ease-in-out 0.5s;
+}
+.cards .card .data{
+    padding: 0 2% 2% 2%;
+}
+.cards .card button{
+    width: 50%;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+.example-full-width {
+    width: 100%;
+}
+table{
+    width: 100%;
+}
+.cards p{
+    color: gray;
+    font-size: 0.8em;
+}

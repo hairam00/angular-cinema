@@ -23,7 +23,7 @@
         <tr>
             <td class="left">
                 <!-- <div class="subnav"> -->
-                    <button mat-stroked-button color="primary" style="margin-left: 8px;">Events</button>
+                    <button mat-stroked-button color="primary" style="margin-left: 8px;" [routerLink]="['/events']">Events</button>
                     <button mat-stroked-button  color="primary" [matMenuTriggerFor]="movieMenu">Movies <i class="material-icons">arrow_drop_down</i></button>
                     <mat-menu #movieMenu="matMenu">
                         <button mat-menu-item [routerLink]="['/all-movies']">All Movies</button>

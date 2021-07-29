@@ -1,0 +1,48 @@
+<div class="bg">
+    <div class="container">
+        <form class="example-form">
+            <table>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Select an option</mat-label>
+                            <mat-select  #category name="category" id="category" (selectionChange)="searchCategory(category.value)">
+                              <mat-option value="All">All</mat-option>
+                              <mat-option value="FESTIVAL">FESTIVAL</mat-option>
+                              <mat-option value="SPORTS">SPORTS</mat-option>
+                              <mat-option value="EXHIBITION">EXHIBITION</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Select an option</mat-label>
+                            <mat-select  #city name="city" id="city" (selectionChange)="searchCity(city.value)">
+                              <mat-option value="All">All</mat-option>
+                              <mat-option value="Lahore">Lahore</mat-option>
+                              <mat-option value="Islamabad">Islamabad</mat-option>
+                              <mat-option value="Karachi">Karachi</mat-option>
+                              <mat-option value="Multan">Multan</mat-option>
+                              <mat-option value="Peshawar">Peshawar</mat-option>
+                              <mat-option value="Faisalabad">Faisalabad</mat-option>
+                              <mat-option value="Rawalpindi">Rawalpindi</mat-option>
+                              <mat-option value="Murree">Murree</mat-option>
+                              <mat-option value="Kashnir">Kashmir</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </td>
+                </tr>
+            </table>    
+        </form>    
+        <div class="cards" >
+            <div class="card" *ngFor="let item of data">
+                <img src="../../../assets/{{item.image}}">
+                <div class="data">
+                    <p>{{item.date}} | {{item.city}}</p>
+                    <h3>{{item.name}}</h3>
+                    <button mat-raised-button color="warn">VIEW DETAILS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

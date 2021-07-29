@@ -133,5 +133,63 @@
       "subject": "Feedback",
       "message": "i am facing problem regarding order tracking"
     }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "name": "Test Event",
+      "date": "July 08, 2021 - July 30, 2021",
+      "city" : "Lahore",
+      "category": "SPORTS",
+      "image" : "test-event.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Test Event",
+      "date": "July 29, 2021",
+      "city" : "Multan",
+      "category": "FESTIVAL",
+      "image" : "CAMPBESTIVAL.jpg"
+    },
+    {
+      "id": 3,
+      "name": "FESTIVAL OF LIGHTS",
+      "date": "September 04, 2021",
+      "city" : "Karachi",
+      "category": "FESTIVAL",
+      "image": "FESTIVALOFLIGHTS.jpg"
+    },
+    {
+      "id": 4,
+      "name": "DRAAIMOLEN FESTIVAL 2021",
+      "date": "September 11, 2021",
+      "city" : "Karachi",
+      "category": "FESTIVAL",
+      "image": "DRAAIMOLENFESTIVAL.jpg"
+    },
+    {
+      "id": 5,
+      "name": "2ND PNDS INTERNATIONAL CONFERENCE2021",
+      "date": "November 04, 2021",
+      "city" : "Karachi",
+      "category": "EXHIBITION",
+      "image": "2NDPNDSINTERNATIONAL.jpg"
+    },
+    {
+      "id": 6,
+      "name": "THE KARACHI ART 'N' CRAFT WINTER GALA 2021",
+      "date": "November 06, 2021",
+      "city" : "Karachi",
+      "category": "EXHIBITION",
+      "image": "THEKARACHIART.jpg"
+    },
+    {
+      "id": 7,
+      "name": "THE INDIE ART AND CRAFT SHOW ISLAMABAD",
+      "date": "December 18, 2021",
+      "city" : "Islamabad",
+      "category": "FESTIVAL",
+      "image": "THEINDIEART.jpg"
+    }
   ]
 }

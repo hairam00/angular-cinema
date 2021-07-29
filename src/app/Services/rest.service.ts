@@ -16,6 +16,7 @@ export class RestService {
   whatsappUrl : string = "http://localhost:3000/whatsapp";
   contactUrl : string = "http://localhost:3000/contacts";
   movieUrl: string = "http://localhost:3000/movies";
+  eventUrl: string = "http://localhost:3000/events";
   // users sign up and login
   getUsers(){
     return this.http.get<Users[]>(this.userUrl);
@@ -47,5 +48,15 @@ export class RestService {
   }
   getMovieCarosul(limit: number){
     return this.http.get<any[]>(this.movieUrl+"?_limit="+limit);
+  }
+  //Events
+  getEvents(){
+    return this.http.get<any[]>(this.eventUrl);
+  }
+  getEvent(city:string){
+    return this.http.get<any[]>(this.eventUrl+"?city="+city);
+  }
+  getEventCategory(category:string){
+    return this.http.get<any[]>(this.eventUrl+'?category='+category);
   }
 }

@@ -36,6 +36,7 @@ import { DetailViewComponent } from './Components/detail-view/detail-view.compon
 import {MatTabsModule} from '@angular/material/tabs';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AllMoviesComponent } from './Components/all-movies/all-movies.component';
+import { AllEventsComponent } from './Components/all-events/all-events.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { AllMoviesComponent } from './Components/all-movies/all-movies.component
     CreateEventComponent,
     DetailViewComponent,
     AllMoviesComponent,
+    AllEventsComponent,
   ],
   imports: [
     BrowserModule,

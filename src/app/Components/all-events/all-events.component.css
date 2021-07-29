@@ -1,9 +1,18 @@
+.picsum-img-wrapper img{
+    width: 100%;
+}
+.carousel-caption{
+    color: black;
+    text-decoration: bold;
+    font-size: 21pt;
+}
 .bg{
     background-color: #d9e8eb;
 }
 .container{
     margin-top: 0.7%;
     padding: 5% 0;
+    margin-bottom: 0%;
 }
 .cards{
     display: flex;

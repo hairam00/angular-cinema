@@ -37,6 +37,7 @@
       "critic": "",
       "videos": "",
       "relase_date": "3rd September 2021",
+      "release": "Upcoming",
       "image": "CONJURING.jpg"
     },
     {
@@ -49,6 +50,7 @@
       "critic": "",
       "videos": "",
       "relase_date": "3rd September 2021",
+      "release": "Now",
       "image": "tom&jerry.jpg"
     },
     {
@@ -61,6 +63,7 @@
       "critic": "",
       "videos": "",
       "relase_date": "20th December 2021",
+      "release": "Now",
       "image": "tenet.jpg"
     },
     {
@@ -73,6 +76,7 @@
       "critic": "",
       "videos": "",
       "relase_date": "20th December 2021",
+      "release": "Now",
       "image": "invisibleMan.jpg"
     },
     {
@@ -85,6 +89,7 @@
       "critic": "",
       "videos": "",
       "relase_date": "20th December 2021",
+      "release": "Now",
       "image": "sonic.jpg"
     },
     {
@@ -97,6 +102,7 @@
       "critic": "",
       "videos": "",
       "relase_date": "10th December 2021",
+      "release": "Now",
       "image": "quiteplace2.jpg"
     },
     {
@@ -109,6 +115,7 @@
       "critic": "",
       "videos": "",
       "relase_date": "10th December 2021",
+      "release": "Upcoming",
       "image": "blackwidows.jfif"
     }
   ],
@@ -145,7 +152,7 @@
     },
     {
       "id": 2,
-      "name": "Test Event",
+      "name": "CAMP BESTIVAL 2021",
       "date": "July 29, 2021",
       "city" : "Multan",
       "category": "FESTIVAL",
@@ -177,7 +184,7 @@
     },
     {
       "id": 6,
-      "name": "THE KARACHI ART 'N' CRAFT WINTER GALA 2021",
+      "name": "THE KARACHI ART 'N' CRAFT WINTER GALA",
       "date": "November 06, 2021",
       "city" : "Karachi",
       "category": "EXHIBITION",

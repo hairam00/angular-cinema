@@ -49,6 +49,9 @@ export class RestService {
   getMovieCarosul(limit: number){
     return this.http.get<any[]>(this.movieUrl+"?_limit="+limit);
   }
+  getMovieRelease(category: string){
+    return this.http.get<any[]>(this.movieUrl +"?release="+category);
+  }
   //Events
   getEvents(){
     return this.http.get<any[]>(this.eventUrl);

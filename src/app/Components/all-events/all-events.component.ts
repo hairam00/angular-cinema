@@ -43,6 +43,7 @@ city: string = '';
       });      
     }else{
       this.getCities();
+      this.openSnackBar("All Events", "x");
     }
   }
   searchCategory(category:string){
@@ -61,6 +62,7 @@ city: string = '';
       });
     }else{
       this.getCities();
+      this.openSnackBar("All Events","x")
     }
   }
 

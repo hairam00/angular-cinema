@@ -1,5 +1,33 @@
+<ngb-carousel>
+    <ng-template ngbSlide >
+      <div class="picsum-img-wrapper" [routerLink]="['/movies', '1' ,'the-conjuring']">
+        <img src="../../../assets/CAMPBESTIVAL.jpg">
+      </div>
+      <div class="carousel-caption">
+        <h3>CAMP BESTIVAL 2021</h3>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper" [routerLink]="['/movies', '6' ,'a-quite-place']">
+        <img src="../../../assets/FESTIVALOFLIGHTS.jpg">
+      </div>
+      <div class="carousel-caption">
+        <h3>FESTIVAL OF LIGHTS</h3>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper" [routerLink]="['/movies', '7' ,'black-widow']">
+        <img src="../../../assets/DRAAIMOLENFESTIVAL.jpg">
+      </div>
+      <div class="carousel-caption">
+        <h3>DRAAIMOLEN FESTIVAL 2021</h3>
+      </div>
+    </ng-template>
+  </ngb-carousel>
 <div class="bg">
     <div class="container">
+        <h1>Filter Events</h1>
+        <hr>
         <form class="example-form">
             <table>
                 <tr>

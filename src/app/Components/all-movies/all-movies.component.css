@@ -4,6 +4,7 @@
 .bg{
     margin-top: -5%;
     background: url(../../../assets/texture-bw.png);
+    margin-bottom: 0;
 }
 mat-grid-tile img{
     height: 80%;
@@ -15,4 +16,15 @@ mat-grid-tile h3{
 }
 .container h1{
     padding-top: 7%;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+.example-full-width {
+    width: 100%;
+}
+table{
+    width: 100%;
 }

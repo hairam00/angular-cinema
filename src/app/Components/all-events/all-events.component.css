@@ -1,10 +1,9 @@
 .picsum-img-wrapper img{
     width: 100%;
 }
-.carousel-caption{
+.carousel-caption h3{
     color: black;
-    text-decoration: bold;
-    font-size: 21pt;
+    font-size: 25pt;
 }
 .bg{
     background-color: #d9e8eb;

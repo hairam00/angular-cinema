@@ -2,6 +2,7 @@
     width: 100%;
 }
 .bg{
+    margin-top: -5%;
     background: url(../../../assets/texture-bw.png);
 }
 mat-grid-tile img{
@@ -11,4 +12,7 @@ mat-grid-tile img{
 }
 mat-grid-tile h3{
     text-align: center;
+}
+.container h1{
+    padding-top: 7%;
 }

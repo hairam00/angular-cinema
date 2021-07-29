@@ -34,63 +34,14 @@
     <button mat-flat-button color="primary" [routerLink]="['/all-movies']" >View All Movies</button>
   </div> <br>
   <div class="cards">
-    <mat-card class="example-card" [routerLink]="['/movies', '1' ,'the-conjuring']" routerLinkActive="router-link-active" >
-      <img mat-card-image src="../../../assets/CONJURING.jpg" alt="Photo of a Shiba Inu">
+    <mat-card class="example-card" [routerLink]="['/movies', '1' ,'the-conjuring']" routerLinkActive="router-link-active" *ngFor="let item of data" >
+      <img mat-card-image src="../../../assets/{{item.image}}" alt="Photo of a Shiba Inu">
       <div class="overlay">
         <div class="text">
           <mat-icon>play_circle_outline</mat-icon> <br>
           <a>Read More</a> <br> <br>
-          <p>THE CONJURING: THE DEVIL MADE ME DO IT (2D)</p>
-          <p>HORROR</p>
-          <button mat-stroked-button color="primary">Book now</button>
-        </div>
-      </div>
-    </mat-card>
-    
-    <mat-card class="example-card" [routerLink]="['/movies', '2', 'tom-and-jerry']" routerLinkActive="router-link-active" >
-      <img mat-card-image src="../../../assets/tom&jerry.jpg" alt="Photo of a Shiba Inu">
-      <div class="overlay">
-        <div class="text">
-          <mat-icon>play_circle_outline</mat-icon> <br>
-          <a>Read More</a> <br> <br>
-          <p>TOM AND JERRY</p>
-          <p>FAMILY</p>
-          <button mat-stroked-button color="primary">Book now</button>
-        </div>
-      </div>
-    </mat-card>
-    <mat-card class="example-card" [routerLink]="['/movies', '3', 'tenet']" routerLinkActive="router-link-active" >
-      <img mat-card-image src="../../../assets/tenet.jpg" alt="Photo of a Shiba Inu">
-      <div class="overlay">
-        <div class="text">
-          <mat-icon>play_circle_outline</mat-icon> <br>
-          <a>Read More</a> <br> <br>
-          <p>TENET</p>
-          <p>ACTION</p>
-          <button mat-stroked-button color="primary">Book now</button>
-        </div>
-      </div>
-    </mat-card>
-    <mat-card class="example-card" [routerLink]="['/movies', '4', 'invisible-man']" routerLinkActive="router-link-active">
-      <img mat-card-image src="../../../assets/invisibleMan.jpg" alt="Photo of a Shiba Inu">
-      <div class="overlay">
-        <div class="text">
-          <mat-icon>play_circle_outline</mat-icon> <br>
-          <a>Read More</a> <br> <br>
-          <p>THE INVISIBLE MAN</p>
-          <p>HORROR</p>
-          <button mat-stroked-button color="primary">Book now</button>
-        </div>
-      </div>
-    </mat-card>
-    <mat-card class="example-card" [routerLink]="['/movies', '5', 'sonic-the-hedgehog']" routerLinkActive="router-link-active">
-      <img mat-card-image src="../../../assets/sonic.jpg" alt="Photo of a Shiba Inu">
-      <div class="overlay">
-        <div class="text">
-          <mat-icon>play_circle_outline</mat-icon> <br>
-          <a>Read More</a> <br> <br>
-          <p>SONIC THE HEDGEHOG</p>
-          <p>ANIMATION</p>
+          <p>{{item.name}}</p>
+          <p>{{item.category}}</p>
           <button mat-stroked-button color="primary">Book now</button>
         </div>
       </div>

@@ -10,6 +10,7 @@ import { RestService } from 'src/app/Services/rest.service';
 export class DetailViewComponent implements OnInit {
   movieId: string = '';
   data: any;
+  carosul:any;
   constructor(private route: ActivatedRoute, private restService:RestService, private router: Router) { }
   
   ngOnInit(): void {
@@ -33,7 +34,10 @@ export class DetailViewComponent implements OnInit {
       if(this.data.videos == ''){
         this.data.videos = "No Video Found yet.";
       }
-    });     
+    });  
+    this.restService.getMovieCarosul(7).subscribe(response => {
+      this.carosul = response;
+    });   
   }
   reload(movieId:string, movieName:string){
     this.router.navigate(['/movies',movieId,movieName])

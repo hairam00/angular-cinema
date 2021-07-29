@@ -45,27 +45,9 @@
         <h1>NOW SHOWING</h1>
         <hr>
         <carousel>
-            <div class="carousel-cell">
-                <img src="../../../assets/CONJURING.jpg" id="1" name="the-conjuring" #movie1 (click)="reload(movie1.id,movie1.name)">
+            <div class="carousel-cell" *ngFor="let movie of carosul">
+                <img src="../../../assets/{{movie.image}}" id="{{movie.id}}" name="{{movie.name}}" (click)="reload(movie.id,  movie.name)">
             </div>
-            <div class="carousel-cell">
-                <img src="../../../assets/tom&jerry.jpg" id="2" name="tom-and-jerry" #movie2 (click)="reload(movie2.id,movie2.name)">
-            </div>
-            <div class="carousel-cell">
-                <img src="../../../assets/tenet.jpg" id="3" name="tenet" #movie3 (click)="reload(movie3.id,movie3.name)">
-            </div>
-            <div class="carousel-cell">
-                <img src="../../../assets/invisibleMan.jpg" id="4" name="invisible-man" #movie4 (click)="reload(movie4.id,movie4.name)">
-            </div>
-            <div class="carousel-cell">
-                <img src="../../../assets/sonic.jpg" id="5" name="sonic" #movie5 (click)="reload(movie5.id,movie5.name)">
-            </div>
-            <div class="carousel-cell">
-                <img src="../../../assets/quiteplace2.jpg" id="6" name="quite-place-2" #movie6 (click)="reload(movie6.id,movie6.name)">
-            </div>
-            <div class="carousel-cell">
-                <img src="../../../assets/blackwidows.jfif" id="7" name="black-widow" #movie7 (click)="reload(movie7.id,movie7.name)">
-            </div>        
         </carousel>
     </div>
 </div>

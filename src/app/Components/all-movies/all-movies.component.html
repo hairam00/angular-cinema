@@ -27,6 +27,8 @@
   <!-- all movies -->
   <div class="bg">
     <div class="container">
+        <h1>ALL MOVIES</h1>
+        <hr>
         <mat-grid-list cols="4" rowHeight="2:3">
             <mat-grid-tile *ngFor="let item of movies">
                 <div class="container" [routerLink]="['/movies', item.id ,item.name]">

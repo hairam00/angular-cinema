@@ -16,7 +16,6 @@ export class RestService {
   whatsappUrl : string = "http://localhost:3000/whatsapp";
   contactUrl : string = "http://localhost:3000/contacts";
   movieUrl: string = "http://localhost:3000/movies";
-
   // users sign up and login
   getUsers(){
     return this.http.get<Users[]>(this.userUrl);
@@ -45,5 +44,8 @@ export class RestService {
   }
   getMovies(){
     return this.http.get<any[]>(this.movieUrl);
+  }
+  getMovieCarosul(limit: number){
+    return this.http.get<any[]>(this.movieUrl+"?_limit="+limit);
   }
 }

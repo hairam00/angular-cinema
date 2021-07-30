@@ -37,6 +37,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AllMoviesComponent } from './Components/all-movies/all-movies.component';
 import { AllEventsComponent } from './Components/all-events/all-events.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { BookingComponent } from './Components/booking/booking.component'
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import { AllEventsComponent } from './Components/all-events/all-events.component
     DetailViewComponent,
     AllMoviesComponent,
     AllEventsComponent,
+    BookingComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,7 +83,8 @@ import { AllEventsComponent } from './Components/all-events/all-events.component
     HttpClientModule,
     MatSnackBarModule,
     MatTabsModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

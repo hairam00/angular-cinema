@@ -1,0 +1,37 @@
+<h2 mat-dialog-title>Book Your Ticket</h2>
+<mat-dialog-content class="mat-typography">
+    <table>
+        <tr>
+            <td style="width:20%">
+                <img src="../../../assets/quiteplace2.jpg">
+            </td>
+            <td>
+                <div class="content">
+                    <h2>The conjuring 2</h2>
+                    <p><strong>Country :</strong> Hollywood</p>
+                    <p><strong>Category :</strong> Action</p>
+                    <p><strong>Date :</strong> Septemeber 20, 2021</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>     
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Number of Seats</mat-label>
+                    <input matInput type="number">
+                </mat-form-field>
+            </td>
+            <td>
+                <button style="margin-left:2rem" mat-raised-button color="primary">Book Now</button>
+            </td>
+        </tr>
+    </table>  
+</mat-dialog-content>

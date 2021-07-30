@@ -1,0 +1,17 @@
+table{
+    width: 100%;
+}
+tr:last-child td{
+    border-spacing: 5rem;
+    padding-top: 5em;
+}
+tr input{
+    width: 100%;
+}
+img{
+    height: 100%;
+    width: 80%;
+}
+.example-full-width {
+    width: 100%;
+}

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RestService } from 'src/app/Services/rest.service';
+import {MatDialog} from '@angular/material/dialog';
+import { BookingComponent } from '../booking/booking.component';
 
 @Component({
   selector: 'app-detail-view',
@@ -12,7 +14,8 @@ export class DetailViewComponent implements OnInit {
   data: any;
   carosul:any;
   type: string = '';
-  constructor(private route: ActivatedRoute, private restService:RestService, private router: Router) { }
+  showFiller = false;
+  constructor(private route: ActivatedRoute, private restService:RestService, private router: Router,public dialog: MatDialog) { }
   
   ngOnInit(): void {
     this.movieId = this.route.snapshot.params.id;
@@ -31,6 +34,17 @@ export class DetailViewComponent implements OnInit {
     this.restService.getMovieCarosul(7).subscribe(response => {
       this.carosul = response;
     });   
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(BookingComponent,{
+      height: '80%',
+      width: '50%'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   getMoviesById(){

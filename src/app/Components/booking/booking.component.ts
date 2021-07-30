@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit, Optional } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { RestService } from 'src/app/Services/rest.service';
 
 @Component({
@@ -16,11 +17,14 @@ movieData : any;
 bookDate: string = '';
 seats: number = 0;
   constructor(public dialogRef: MatDialogRef<BookingComponent>,
-    @Optional() @Inject(MAT_DIALOG_DATA) public data: any, private rest: RestService) { 
+    @Optional() @Inject(MAT_DIALOG_DATA) public data: any, private rest: RestService, private _snackBar: MatSnackBar) { 
       this.getMovieByID(data.idMovies);
     }
 
   ngOnInit(): void {
+  }
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
   }
   getMovieByID(id:string){
     this.rest.getMovie(id).subscribe(res => {
@@ -34,11 +38,8 @@ seats: number = 0;
       seats: seats,
       ticket_id: this.movieData.id
     };
-    console.log("Date: "+ date + " Seats: "+ seats)
-    console.log(data);
-    this.rest.uploadBooking(data).subscribe(response => {
-      console.log()
-    });
+    this.rest.uploadBooking(data).subscribe();
+    this.openSnackBar(seats+ " Seats booked for "+ date,"x");
   }
 
 }

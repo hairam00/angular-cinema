@@ -17,6 +17,7 @@ export class RestService {
   contactUrl : string = "http://localhost:3000/contacts";
   movieUrl: string = "http://localhost:3000/movies";
   eventUrl: string = "http://localhost:3000/events";
+  bookingUrl: string = "http://localhost:3000/bookings"
   // users sign up and login
   getUsers(){
     return this.http.get<Users[]>(this.userUrl);
@@ -64,5 +65,9 @@ export class RestService {
   }
   getEventbyId(id:string){
     return this.http.get<any[]>(this.eventUrl+'?id='+id);
+  }
+  //bookings
+  uploadBooking(data:any){
+    return this.http.post(this.bookingUrl, data);
   }
 }

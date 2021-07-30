@@ -39,7 +39,8 @@ export class DetailViewComponent implements OnInit {
   openDialog() {
     const dialogRef = this.dialog.open(BookingComponent,{
       height: '80%',
-      width: '50%'
+      width: '50%',
+      data: { idMovies: this.movieId }
     });
 
     dialogRef.afterClosed().subscribe(result => {

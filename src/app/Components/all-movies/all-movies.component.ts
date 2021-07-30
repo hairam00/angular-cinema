@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { RestService } from 'src/app/Services/rest.service';
@@ -10,8 +10,11 @@ import { RestService } from 'src/app/Services/rest.service';
 })
 export class AllMoviesComponent implements OnInit {
 movies: any;
+@ViewChild('category', { static: true }) input: ElementRef | undefined;
   constructor(private router: Router, private restService: RestService, private _snackBar: MatSnackBar) { }
-
+  ngAfterViewInit() {
+    console.log(this.input?.nativeElement.value);
+  }
   ngOnInit(): void {
     //get all movie from server
     this.getMovies();
@@ -53,5 +56,7 @@ movies: any;
   clear(){
     this.getMovies();
     this.openSnackBar("Showing All Movies", "x");
+    let a = this.input?.nativeElement.value;
+    a = "All";
   }
 }

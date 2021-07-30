@@ -62,4 +62,7 @@ export class RestService {
   getEventCategory(category:string){
     return this.http.get<any[]>(this.eventUrl+'?category='+category);
   }
+  getEventbyId(id:string){
+    return this.http.get<any[]>(this.eventUrl+'?id='+id);
+  }
 }

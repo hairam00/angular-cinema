@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: 'contact', component: ContactUsComponent},
   {path: 'create-event', component: CreateEventComponent},
   {path: 'all-movies', component: AllMoviesComponent},
-  {path: 'movies/:id/:name', component: DetailViewComponent},
+  // {path: 'movies/:id/:name', component: DetailViewComponent},
+  {path: ':type/:id/:name', component: DetailViewComponent},
   {path: 'events' , component: AllEventsComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full' }
 ];

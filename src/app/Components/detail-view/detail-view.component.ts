@@ -11,15 +11,30 @@ export class DetailViewComponent implements OnInit {
   movieId: string = '';
   data: any;
   carosul:any;
+  type: string = '';
   constructor(private route: ActivatedRoute, private restService:RestService, private router: Router) { }
   
   ngOnInit(): void {
     this.movieId = this.route.snapshot.params.id;
+    this.type = this.route.snapshot.params.type;
+    if(this.type == 'movies'){
+      console.log("Movie Route");
+      this.getMoviesById();
+    }
+    if(this.type == 'events'){
+      console.log("event Route");
+      this.getEvensById();
+    }
     window.scrollTo(0, 0);
 
+    
+    this.restService.getMovieCarosul(7).subscribe(response => {
+      this.carosul = response;
+    });   
+  }
+
+  getMoviesById(){
     this.restService.getMovie(this.movieId).subscribe(resp =>{
-      this.data = resp[0];
-      console.log(resp[0]);
       this.data = resp[0];
       console.log(this.data);
       if(this.data.summary == '' ){
@@ -35,9 +50,24 @@ export class DetailViewComponent implements OnInit {
         this.data.videos = "No Video Found yet.";
       }
     });  
-    this.restService.getMovieCarosul(7).subscribe(response => {
-      this.carosul = response;
-    });   
+  }
+  getEvensById(){
+    this.restService.getEventbyId(this.movieId).subscribe(eventResp => {
+      this.data = eventResp[0];
+      console.warn(this.data);
+      if(this.data.summary == '' ){
+        this.data.summary = 'No synopsis found for this movie yet.';
+      } 
+      if(this.data.user_review == '' ){
+        this.data.user_review = 'No users have reviewed this movie yet.';
+      } 
+      if(this.data.critic == ''){
+        this.data.critic = "None of the Critics have reviewed this movie yet.";
+      }
+      if(this.data.videos == ''){
+        this.data.videos = "No Video Found yet.";
+      }
+    });
   }
   reload(movieId:string, movieName:string){
     this.router.navigate(['/movies',movieId,movieName])

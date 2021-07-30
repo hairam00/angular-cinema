@@ -50,3 +50,10 @@ table{
     color: gray;
     font-size: 0.8em;
 }
+table button{
+    position: relative;
+    left: 30%;
+    top: -150%;
+    height: 200%;
+    padding: 15% 30%;
+}

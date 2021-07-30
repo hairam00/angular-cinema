@@ -65,5 +65,9 @@ city: string = '';
       this.openSnackBar("All Events","x")
     }
   }
+  clear(){
+    this.getCities();
+    
+  }
 
 }

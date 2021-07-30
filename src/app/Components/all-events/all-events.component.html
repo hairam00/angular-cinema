@@ -1,6 +1,6 @@
 <ngb-carousel>
     <ng-template ngbSlide >
-      <div class="picsum-img-wrapper" [routerLink]="['/events', '1' ,'CAMP-BESTIVAL-2021']">
+      <div class="picsum-img-wrapper" [routerLink]="['/events', '2' ,'CAMP-BESTIVAL-2021']">
         <img src="../../../assets/CAMPBESTIVAL.jpg">
       </div>
       <div class="carousel-caption">
@@ -8,7 +8,7 @@
       </div>
     </ng-template>
     <ng-template ngbSlide>
-      <div class="picsum-img-wrapper" [routerLink]="['/events', '6' ,'FESTIVAL-OF-LIGHTS']">
+      <div class="picsum-img-wrapper" [routerLink]="['/events', '3' ,'FESTIVAL-OF-LIGHTS']">
         <img src="../../../assets/FESTIVALOFLIGHTS.jpg">
       </div>
       <div class="carousel-caption">
@@ -16,7 +16,7 @@
       </div>
     </ng-template>
     <ng-template ngbSlide>
-      <div class="picsum-img-wrapper" [routerLink]="['/events', '7' ,'DRAAIMOLEN-FESTIVAL-2021']">
+      <div class="picsum-img-wrapper" [routerLink]="['/events', '4' ,'DRAAIMOLEN-FESTIVAL-2021']">
         <img src="../../../assets/DRAAIMOLENFESTIVAL.jpg">
       </div>
       <div class="carousel-caption">
@@ -59,6 +59,9 @@
                             </mat-select>
                           </mat-form-field>
                     </td>
+                    <td>
+                        <button mat-raised-button color="warn" (click)="clear()">Clear <mat-icon>close</mat-icon></button>  
+                    </td>
                 </tr>
             </table>    
         </form>    
@@ -68,7 +71,7 @@
                 <div class="data">
                     <p>{{item.date}} | {{item.city}}</p>
                     <h3>{{item.name}}</h3>
-                    <button mat-raised-button color="warn">VIEW DETAILS</button>
+                    <button mat-raised-button color="warn" [routerLink]="['/events', item.id, item.name]" >VIEW DETAILS</button>
                 </div>
             </div>
         </div>

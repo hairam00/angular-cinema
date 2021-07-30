@@ -50,4 +50,8 @@ movies: any;
     this.ngOnInit();
     });
   }
+  clear(){
+    this.getMovies();
+    this.openSnackBar("Showing All Movies", "x");
+  }
 }

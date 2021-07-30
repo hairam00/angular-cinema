@@ -3,12 +3,12 @@
     justify-content: space-around;
 }
 .cards img{
-    width: 125%;
-    height: 115% ;
+    width: 119%;
+    height: 111% ;
     border-radius: 4px;
 }
 .example-card {
-    max-width: 200px;
+    max-width: 130%;
     margin: 1%;
 }
 .overlay {

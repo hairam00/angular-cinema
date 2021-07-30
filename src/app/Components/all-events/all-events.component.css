@@ -2,8 +2,11 @@
     width: 100%;
 }
 .carousel-caption h3{
-    color: black;
-    font-size: 25pt;
+    font-size: 30pt;
+}
+ngb-carousel img{
+    -webkit-filter: brightness(70%);
+    filter:brightness(70%);
 }
 .bg{
     background-color: #d9e8eb;

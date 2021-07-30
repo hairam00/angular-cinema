@@ -1,3 +1,10 @@
+ngb-carousel img{
+    -webkit-filter: brightness(70%);
+    filter:brightness(70%);
+}
+ngb-carousel .carousel-caption h3{
+    font-size: 30pt;
+}
 .cards{
     display: flex;
     justify-content: space-around;

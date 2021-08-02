@@ -1,5 +1,8 @@
 header{
     z-index: 2;
+    position: fixed;
+    background: #fff;
+    top: 0px;
 }
 header table{
     width: 100%;

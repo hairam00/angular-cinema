@@ -15,3 +15,60 @@ img{
 .example-full-width {
     width: 100%;
 }
+.time{
+    display: inline;
+    margin: 1%;
+    padding: 3%;
+    width: 20% !important;
+    border: none;
+}
+.slot1{
+    color: white;
+    background-color: #3f51b5;
+    transition: ease 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.slot2{
+    color: white;
+    background-color: #3f51b5;
+    transition: ease 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.slot3{
+    color: white;
+    background-color: #3f51b5;
+    transition: ease 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.slot4{
+    color: white;
+    background-color: #3f51b5;
+    transition: ease 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.slot5{
+    color: white;
+    background-color: #3f51b5;
+    transition: ease 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.slot6{
+    color: white;
+    background-color: #3f51b5;
+    transition: ease 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+/* .time:focus{
+    color: white;
+    background-color: #3f51b5;
+    transition: ease 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+} */

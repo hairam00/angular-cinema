@@ -1,37 +1,113 @@
 <h2 mat-dialog-title>Book Your Ticket</h2>
 <mat-dialog-content class="mat-typography">
-    <table>
-        <tr>
-            <td style="width:20%">
-                <img src="../../../assets/{{movieData.image}}">
-            </td>
-            <td>
-                <div class="content">
-                    <h2>{{movieData.name}}</h2>
-                    <p><strong>Country :</strong> {{movieData.country}}</p>
-                    <p><strong>Category :</strong> {{movieData.category}}</p>
-                    <p><strong>Date :</strong> {{movieData.relase_date}}</p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>     
-                <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label>Choose a date</mat-label>
-                    <input matInput [matDatepicker]="picker" #date id="date" >
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
-                </mat-form-field>
-            </td>
-            <td>
-                <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label>Number of Seats</mat-label>
-                    <input matInput type="number" #seats id="seats">  
-                </mat-form-field>
-            </td>
-            <td>
-                <button style="margin-left:2rem" mat-raised-button color="primary" (click)="uploadBooking(date.value,seats.value)">Book Now</button>
-            </td>
-        </tr>
-    </table>  
+  <table>
+    <tr>
+      <td style="width: 20%">
+        <img
+          *ngIf="movieData != 'undefined'"
+          src="../../../assets/{{ movieData.image }}"
+        />
+      </td>
+      <td colspan="2">
+        <div class="content">
+          <h2>{{ movieData.name }}</h2>
+          <p><strong>Country :</strong> {{ movieData.country }}</p>
+          <p><strong>Category :</strong> {{ movieData.category }}</p>
+          <p><strong>Date :</strong> {{ movieData.relase_date }}</p>
+          <p>
+            <strong>Show Times :</strong>
+            <input
+              type="button"
+              class="time"
+              #slot1
+              id="slot1"
+              value="{{ movieData.slot1 }}"
+              (click)="selectTime(slot1.value)"
+              (click)="toggle(slot1.id)"
+              [ngClass]="slot1 ? 'time' : 'slot1'"
+            />
+            <input
+              type="button"
+              class="time"
+              #slot2
+              id="slot2"
+              value="{{ movieData.slot2 }}"
+              (click)="selectTime(slot2.value)"
+              (click)="toggle(slot2.id)"
+              [ngClass]="slot2 ? 'time' : 'slot2'"
+            />
+            <input
+              type="button"
+              class="time"
+              #slot3
+              id="slot3"
+              value="{{ movieData.slot3 }}"
+              (click)="selectTime(slot3.value)"
+              (click)="toggle(slot3.id)"
+              [ngClass]="slot3 ? 'time' : 'slot3'"
+            />
+            <input
+              type="button"
+              class="time"
+              #slot4
+              id="slot4"
+              value="{{ movieData.slot4 }}"
+              (click)="selectTime(slot4.value)"
+              (click)="toggle(slot4.id)"
+              [ngClass]="slot4 ? 'time' : 'slot4'"
+            />
+            <input
+              type="button"
+              class="time"
+              #slot5
+              id="slot5"
+              value="{{ movieData.slot5 }}"
+              (click)="selectTime(slot5.value)"
+              (click)="toggle(slot5.id)"
+              [ngClass]="slot5 ? 'time' : 'slot5'"
+            />
+            <input
+              type="button"
+              class="time"
+              #slot6
+              id="slot6"
+              value="{{ movieData.slot6 }}"
+              (click)="selectTime(slot6.value)"
+              (click)="toggle(slot6.id)"
+              [ngClass]="slot6 ? 'time' : 'slot6'"
+            />
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker" #date id="date" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Number of Seats</mat-label>
+          <input matInput type="number" #seats id="seats" />
+        </mat-form-field>
+      </td>
+      <td>
+        <button
+          style="margin-left: 2rem"
+          mat-raised-button
+          color="primary"
+          (click)="uploadBooking(date.value, seats.value)"
+        >
+          Book Now
+        </button>
+      </td>
+    </tr>
+  </table>
 </mat-dialog-content>

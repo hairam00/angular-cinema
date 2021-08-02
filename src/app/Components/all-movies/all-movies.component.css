@@ -1,3 +1,6 @@
+ngb-carousel{
+    margin-top: 7%;
+}
 ngb-carousel img{
     -webkit-filter: brightness(70%);
     filter:brightness(70%);

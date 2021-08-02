@@ -13,7 +13,6 @@ movies: any;
 @ViewChild('category', { static: true }) input: ElementRef | undefined;
   constructor(private router: Router, private restService: RestService, private _snackBar: MatSnackBar) { }
   ngAfterViewInit() {
-    console.log(this.input?.nativeElement.value);
   }
   ngOnInit(): void {
     //get all movie from server
@@ -25,7 +24,6 @@ movies: any;
   getMovies(){
     this.restService.getMovies().subscribe(response => {
       this.movies = response;
-      console.log(this.movies);
     });
   }
   getMovieCategory(release: string){
@@ -35,8 +33,7 @@ movies: any;
     }else{
       this.restService.getMovieRelease(release).subscribe(res => {
         this.movies = res;
-        let keys = Object.keys(this.movies).length
-        console.log(keys);
+        let keys = Object.keys(this.movies).length;
         if(keys == 0){
           this.openSnackBar("No Upcoming Movie found ", "x");
         }else{

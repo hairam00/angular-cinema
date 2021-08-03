@@ -45,3 +45,6 @@ table button{
     height: 200%;
     padding: 10% 20%;
 }
+carousel{
+    z-index: 0;
+}

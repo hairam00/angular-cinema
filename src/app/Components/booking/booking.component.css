@@ -3,7 +3,7 @@ table{
 }
 tr:last-child td{
     border-spacing: 5rem;
-    padding-top: 5em;
+    padding-top: 2em;
 }
 tr input{
     width: 100%;

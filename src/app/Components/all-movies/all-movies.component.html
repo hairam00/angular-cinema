@@ -27,7 +27,8 @@
   <!-- all movies -->
   <div class="bg">
     <div class="container">
-      <h1>Filter</h1>
+      <div *ngIf="!hideFilter">
+        <h1>Filter</h1>
       <hr>
       <form class="example-form">
         <table>
@@ -38,6 +39,7 @@
                         <mat-select #category name="category" id="category" (selectionChange)="getMovieCategory(category.value)">
                           <mat-option value="All">All</mat-option>
                           <mat-option value="Upcoming">Upcoming</mat-option>
+                          <mat-option value="Now">Now Showing</mat-option>
                         </mat-select>
                       </mat-form-field>
                 </td>
@@ -47,7 +49,8 @@
             </tr>
         </table>    
     </form>
-        <h1>ALL MOVIES</h1>
+      </div>
+        <h1>MOVIES</h1>
         <hr>
         <mat-grid-list cols="4" rowHeight="2:3">
             <mat-grid-tile *ngFor="let item of movies">

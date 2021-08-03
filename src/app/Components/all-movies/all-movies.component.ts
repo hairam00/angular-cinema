@@ -10,13 +10,22 @@ import { RestService } from 'src/app/Services/rest.service';
 })
 export class AllMoviesComponent implements OnInit {
 movies: any;
+hideFilter: boolean = false;
 @ViewChild('category', { static: true }) input: ElementRef | undefined;
   constructor(private router: Router, private restService: RestService, private _snackBar: MatSnackBar) { }
   ngAfterViewInit() {
   }
   ngOnInit(): void {
-    //get all movie from server
-    this.getMovies();
+    if(this.router.url == '/all-movies/upcoming'){
+      this.getMovieCategory('Upcoming');
+      this.hideFilter = true;
+    }else if(this.router.url == '/all-movies/now-showing'){
+      this.getMovieCategory('Now');
+      this.hideFilter = true;
+    }else{
+      this.getMovies();
+      this.hideFilter = false;
+    }
   }
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);
@@ -26,6 +35,7 @@ movies: any;
       this.movies = response;
     });
   }
+
   getMovieCategory(release: string){
     if(release == 'All'){
       this.getMovies();
@@ -36,8 +46,6 @@ movies: any;
         let keys = Object.keys(this.movies).length;
         if(keys == 0){
           this.openSnackBar("No Upcoming Movie found ", "x");
-        }else{
-          this.openSnackBar("Found " + keys + " Upcoming Movies", "x");
         }
       }, error => {
         console.log(error);

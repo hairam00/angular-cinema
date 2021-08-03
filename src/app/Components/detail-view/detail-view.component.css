@@ -60,3 +60,6 @@ mat-tab-group{
     padding: 5%;
     margin-bottom: 5%;
 }
+carousel{
+    z-index: 0;
+}

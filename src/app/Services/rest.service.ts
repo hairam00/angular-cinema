@@ -70,4 +70,7 @@ export class RestService {
   uploadBooking(data:any){
     return this.http.post(this.bookingUrl, data);
   }
+  getBookings(){
+    return this.http.get<any[]>(this.bookingUrl);
+  }
 }

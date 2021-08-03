@@ -58,7 +58,10 @@ export class HeaderComponent implements OnInit {
     });
   }
   trackingCode(){
-    const dialogRef = this.dialog.open(TrackingCodeComponent);
+    const dialogRef = this.dialog.open(TrackingCodeComponent, {
+      height: '80%',
+      width: '50%',
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);

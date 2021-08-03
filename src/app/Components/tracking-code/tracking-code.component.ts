@@ -8,7 +8,8 @@ import { RestService } from 'src/app/Services/rest.service';
 })
 export class TrackingCodeComponent implements OnInit {
   value = '';
-  bookData:Array<any>= [];
+  movieData:Array<any>= [];
+  bookData: Array<any> = [];
   constructor(private rest:RestService) { }
 
   ngOnInit(): void {
@@ -16,15 +17,16 @@ export class TrackingCodeComponent implements OnInit {
   }
   getBookings(){
     this.rest.getBookings().subscribe(response =>{
+      this.bookData = response;
       for(let i=0; i < response.length;i++){
         this.getMovieById(response[i]["ticket_id"]);
       }
-      console.warn(this.bookData);
+      console.warn(this.movieData);
     })
   }
   getMovieById(id:string){
     this.rest.getMovie(id).subscribe(resp => {
-      this.bookData.push(resp)
+      this.movieData.push(resp)
     })
   }
 }

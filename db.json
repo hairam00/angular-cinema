@@ -248,6 +248,20 @@
       "ticket_id": 1,
       "timings": "10am",
       "id": 4
+    },
+    {
+      "booking_date": "8/4/2021",
+      "seats": "2",
+      "ticket_id": 2,
+      "timings": "11pm",
+      "id": 5
+    },
+    {
+      "booking_date": "8/5/2021",
+      "seats": "5",
+      "ticket_id": 3,
+      "timings": "5pm",
+      "id": 6
     }
   ]
 }

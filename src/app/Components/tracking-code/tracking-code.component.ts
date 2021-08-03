@@ -39,13 +39,9 @@ export class TrackingCodeComponent implements OnInit {
     })
   }
   trackingCode(){
-    const dialogRef = this.dialog.open(TrackingCodeComponent, {
+    this.dialog.open(TrackingCodeComponent, {
       height: '80%',
       width: '50%',
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
     });
   }
 }

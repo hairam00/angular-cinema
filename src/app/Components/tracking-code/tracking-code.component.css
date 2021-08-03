@@ -1,4 +1,8 @@
 img{
     width: 50%;
-    height: 80%;
+    height: 100%;
+}
+.row{
+    border-bottom: solid 1px #dfdfdf;
+    padding: 5%;
 }

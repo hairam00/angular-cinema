@@ -73,4 +73,7 @@ export class RestService {
   getBookings(){
     return this.http.get<any[]>(this.bookingUrl);
   }
+  deleteBooking(id: number){
+    return this.http.delete(this.bookingUrl + "/" + id);
+  }
 }

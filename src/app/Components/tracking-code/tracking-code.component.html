@@ -2,13 +2,14 @@
 <mat-dialog-content class="mat-typography">
         <div class="row" *ngFor="let item of movieData;let i = index">
             <div class="col-sm">
-              <img src="../../../assets/{{item[0].image}}">
+              <img *ngIf="item != 'undefined'" src="../../../assets/{{item[0].image}}">
             </div>
             <div class="col-sm">
               <h1>{{item[0].name}}</h1>
-              <p>seats: {{bookData[i].seats}}</p>
+              <p >seats: {{bookData[i].seats}}</p>
               <p>Date: {{bookData[i].booking_date}}</p>
               <p>Time: {{bookData[i].timings}}</p>
+              <button mat-raised-button color="warn" (click)="delteBooking(bookData[i].id)">Cancel</button>
             </div>
         </div>
 </mat-dialog-content>

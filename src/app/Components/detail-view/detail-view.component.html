@@ -10,8 +10,8 @@
     </div>
     <div class="tabs">
         <h1 *ngIf="data != 'undefined'">{{data.name}}</h1>
-        <span *ngIf="data != 'undefined'">{{data.country}}</span> <span *ngIf="data != 'undefined'">{{data.category}}</span> <br> 
-        <p *ngIf="data != 'undefined'">Relase Data {{data.relase_date}}</p>
+        <span *ngIf="data.country == ''">{{data.country}}</span> <span *ngIf="data != 'undefined'">{{data.category}}</span> <br> 
+        <p *ngIf="data.relase_date == ''">Relase Data {{data.relase_date}}</p>
         <mat-tab-group mat-align-tabs="center">
             <mat-tab label="Summary">
                <div class="containers">

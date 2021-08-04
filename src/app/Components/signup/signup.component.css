@@ -3,6 +3,14 @@
     width: 50px;
     margin-left: 40%;
 }
-mat-dialog-content h1{
+/* mat-dialog-content h1{
     margin-left: 20%;    
+} */
+img{
+    height: 40%;
+    width: 40%;
+}
+.container{
+    text-align: center;
+    align-items: center;
 }

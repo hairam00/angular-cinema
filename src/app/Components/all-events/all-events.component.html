@@ -33,7 +33,8 @@
                 <tr>
                     <td>
                         <mat-form-field class="example-full-width" appearance="fill">
-                            <mat-label>Select an option</mat-label>
+                            <mat-label>Select Category</mat-label>
+                            <mat-icon matPrefix>category</mat-icon>
                             <mat-select  #category name="category" id="category" (selectionChange)="searchCategory(category.value)">
                               <mat-option value="All">All</mat-option>
                               <mat-option value="FESTIVAL">FESTIVAL</mat-option>
@@ -44,7 +45,8 @@
                     </td>
                     <td>
                         <mat-form-field class="example-full-width" appearance="fill">
-                            <mat-label>Select an option</mat-label>
+                          <mat-icon matPrefix>location_city</mat-icon>
+                            <mat-label>Select City</mat-label>
                             <mat-select  #city name="city" id="city" (selectionChange)="searchCity(city.value)">
                               <mat-option value="All">All</mat-option>
                               <mat-option value="Lahore">Lahore</mat-option>

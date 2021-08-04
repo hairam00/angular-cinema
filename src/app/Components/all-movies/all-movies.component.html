@@ -35,6 +35,7 @@
             <tr>
                 <td>
                     <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-icon matPrefix>category</mat-icon>
                         <mat-label>Select an option</mat-label>
                         <mat-select #category name="category" id="category" (selectionChange)="getMovieCategory(category.value)">
                           <mat-option value="All">All</mat-option>

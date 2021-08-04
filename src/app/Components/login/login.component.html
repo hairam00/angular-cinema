@@ -10,6 +10,7 @@
             <mat-form-field class="example-full-width" appearance="fill" style="width: 90%;">
                 <mat-label>Email</mat-label>
                 <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com" [(ngModel)]="email" name="email" id="email" required>
+                <mat-icon matPrefix>mail_outline</mat-icon>
                 <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                     Please enter a valid email address
                 </mat-error>
@@ -21,6 +22,7 @@
             <mat-form-field class="example-full-width" appearance="fill" style="width: 90%;">
                 <mat-label>Password</mat-label>
                 <input matInput type="password" [(ngModel)]="password" name="password" id="password" required>
+                <mat-icon matPrefix>lock</mat-icon>
                 </mat-form-field>
             <p>Forgot your Password???</p>
             <p>Not a member? <a mat-button color="primary" (click)="signupDialog()">Sign up now</a> </p>

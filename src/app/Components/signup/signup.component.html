@@ -10,11 +10,13 @@
             <mat-form-field class="example-full-width" appearance="fill" style="width: 100%;">
                 <mat-label>Full Name</mat-label>
                 <input matInput type="text" [(ngModel)]="users.name" name="name" id="name" required>
+                <mat-icon matPrefix>person_outline</mat-icon>
                 <mat-label *ngIf="nameError">{{nameError}}</mat-label>
             </mat-form-field>
             <mat-form-field class="example-full-width" appearance="fill" style="width:100%;">
                 <mat-label>Email</mat-label>
                 <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com" [(ngModel)]="users.email" name="email" id="email" required>
+                <mat-icon matPrefix>mail_outline</mat-icon>
                 <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                   Please enter a valid email address
                 </mat-error>
@@ -26,6 +28,7 @@
                 <tr>
                     <td>
                         <mat-form-field appearance="fill">
+                            <span matPrefix style="margin-right: 8px;"><mat-icon>home</mat-icon></span>
                             <mat-label>Select an option</mat-label>
                             <mat-select [(value)]="selected" [(ngModel)]="users.code" name="code" id="code" required>
                               <mat-option>Code</mat-option>
@@ -46,6 +49,7 @@
                         <mat-form-field class="example-full-width" appearance="fill">
                             <mat-label>Contact Number</mat-label>
                             <input matInput #postalCode maxlength="7" placeholder="0000000" [(ngModel)]="users.number" name="number" id="number" required>
+                            <mat-icon matPrefix>phone</mat-icon>
                             <mat-hint align="end">{{postalCode.value.length}} / 7</mat-hint>
                         </mat-form-field>
                     </td>
@@ -54,6 +58,7 @@
             <mat-form-field class="example-full-width" appearance="fill" style="width: 100%;">
                 <mat-label>Password</mat-label>
                 <input matInput type="password" [(ngModel)]="users.password" name="password" id="password" required>
+                <mat-icon matPrefix>lock</mat-icon>
             </mat-form-field>
             <p>Already a member?  <a mat-button color="primary" (click)="signIn()" >Sign in Now</a> </p>
         <br>

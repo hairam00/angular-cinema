@@ -263,5 +263,13 @@
       "timings": "5pm",
       "id": 6
     }
+  ],
+  "offers":[
+    {
+      "id": 1,
+      "valid_till":"09, December 2018",
+      "applicable": "Ring of Pakistan",
+      "image": ""
+    }
   ]
 }

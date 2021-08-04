@@ -21,11 +21,9 @@ export class DetailViewComponent implements OnInit {
     this.movieId = this.route.snapshot.params.id;
     this.type = this.route.snapshot.params.type;
     if(this.type == 'movies'){
-      console.log("Movie Route");
       this.getMoviesById();
     }
     if(this.type == 'events'){
-      console.log("event Route");
       this.getEvensById();
     }
     window.scrollTo(0, 0);

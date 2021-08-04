@@ -11,13 +11,15 @@ import { Whatsapp } from '../Classes/whatsapp';
 export class RestService {
 
   constructor(private http:HttpClient) { }
+  // urls
   userUrl : string = "http://localhost:3000/users";
   newsletterUrl : string = "http://localhost:3000/newsletter";
   whatsappUrl : string = "http://localhost:3000/whatsapp";
   contactUrl : string = "http://localhost:3000/contacts";
   movieUrl: string = "http://localhost:3000/movies";
   eventUrl: string = "http://localhost:3000/events";
-  bookingUrl: string = "http://localhost:3000/bookings"
+  bookingUrl: string = "http://localhost:3000/bookings";
+  offerUrl: string = "http://localhost:3000/offers";
   // users sign up and login
   getUsers(){
     return this.http.get<Users[]>(this.userUrl);
@@ -75,5 +77,9 @@ export class RestService {
   }
   deleteBooking(id: number){
     return this.http.delete(this.bookingUrl + "/" + id);
+  }
+  //offers
+  getOffers(filter:string){
+    return this.http.get<any[]>(this.offerUrl + "?validation="+filter);
   }
 }

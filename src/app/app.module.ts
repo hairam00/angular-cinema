@@ -38,7 +38,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AllMoviesComponent } from './Components/all-movies/all-movies.component';
 import { AllEventsComponent } from './Components/all-events/all-events.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { BookingComponent } from './Components/booking/booking.component'
+import { BookingComponent } from './Components/booking/booking.component';
+import { OffersComponent } from './Components/offers/offers.component'
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { BookingComponent } from './Components/booking/booking.component'
     AllMoviesComponent,
     AllEventsComponent,
     BookingComponent,
+    OffersComponent,
   ],
   imports: [
     BrowserModule,

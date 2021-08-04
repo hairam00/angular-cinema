@@ -1,0 +1,30 @@
+<div class="container current">
+    <h1>CURRENT OFFERS</h1>
+    <hr>
+    <div *ngIf="currentOffer != 'undefined' || currentOffer != ''" class="row">
+        <div class="col-6" *ngFor="let offer of currentOffer">
+            <div class="card">
+                <img src="../../../assets/offers/{{offer.image}}" alt="">
+                <h2>Terms & Conditions</h2>
+                <p>Applicable on: {{offer.applicable}}</p>
+                <p>Valid till: {{offer.valid_till}}</p>
+            </div>
+        </div>
+    </div>
+    <p *ngIf="currentOffer == 'undefined' || currentOffer == ''">No current offers available. Stay tuned for exciting offers</p>
+</div>
+<div class="container previous">
+    <h1>PREVIOUS OFFERS</h1>
+    <hr>
+    <p *ngIf="previousOffer == '' || previousOffer == 'undefined'">No pervious offers available. Stay tuned for exciting offers</p>
+    <div class="row">
+        <div class="col-6" *ngFor="let offer of previousOffer">
+            <div class="card">
+                <img src="../../../assets/offers/{{offer.image}}" alt="">
+                <h2>Terms & Conditions</h2>
+                <p>Applicable on: {{offer.applicable}}</p>
+                <p>Valid till: {{offer.valid_till}}</p>
+            </div>
+        </div>
+    </div>
+</div>

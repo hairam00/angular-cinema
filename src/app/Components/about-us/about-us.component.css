@@ -9,8 +9,13 @@
     justify-content: space-between;
     text-align: center;
 }
+.info mat-icon{
+    color: #ca191f;
+    font-size: 10em;
+    margin-left: -40%;
+}
 .spacebar{
-    border: solid 2px red;
+    border: solid 2px #ca191f;
     width: 80px;
     display: inline-block;
 }

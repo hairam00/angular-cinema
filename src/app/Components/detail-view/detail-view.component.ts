@@ -28,7 +28,6 @@ export class DetailViewComponent implements OnInit {
     }
     window.scrollTo(0, 0);
 
-    
     this.restService.getMovieCarosul(7).subscribe(response => {
       this.carosul = response;
     });   

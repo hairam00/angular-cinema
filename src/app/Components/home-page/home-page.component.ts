@@ -9,6 +9,7 @@ import { RestService } from 'src/app/Services/rest.service';
 })
 export class HomePageComponent implements OnInit {
   data: any;
+  eventData: any;
   constructor(private restService: RestService) { }
 
   ngOnInit(): void {
@@ -16,5 +17,8 @@ export class HomePageComponent implements OnInit {
     this.restService.getMovieCarosul(5).subscribe(response => {
       this.data = response;
     });
+    this.restService.getEvents().subscribe(res => {
+      this.eventData = res;
+    })
   }
 }

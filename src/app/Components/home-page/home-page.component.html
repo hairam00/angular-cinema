@@ -57,16 +57,16 @@
     </div>
     <div class="cards">
       <div class="event-card">
-        <img src="../../../assets/test-event.jpg" alt="test-event">
-        <p>July 08, 2021 - July 30, 2021 | Karachi</p>
-        <h6>TEST EVENT</h6>
-        <button mat-flat-button color="primary">Book it now</button>
+        <img src="../../../assets/{{eventData[0].image}}" alt="test-event">
+        <p>{{eventData[0].date}} | {{eventData[0].city}}</p>
+        <h5>{{eventData[0].name}}</h5>
+        <button mat-flat-button color="primary" [routerLink]="['/events', eventData[0].id , eventData[0].name]">Read more</button>
       </div>
       <div class="event-card">
-        <img src="../../../assets/indie.jpg" alt="indie">
-        <p>December 18, 2021 | Islamabad</p>
-        <h6>THE INDIE ART AND CRAFT SHOW ISLAMABAD</h6>
-        <button mat-flat-button color="primary">Book it now</button>
+        <img src="../../../assets/{{eventData[1].image}}" alt="indie">
+        <p>{{eventData[1].date}} | {{eventData[1].city}}</p>
+        <h6>{{eventData[1].name}}</h6>
+        <button mat-flat-button color="primary" [routerLink]="['/events', eventData[1].id , eventData[1].name]">Read more</button>
       </div>
     </div>
   </div>

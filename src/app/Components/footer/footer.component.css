@@ -1,7 +1,22 @@
+.row{
+    width: 100%;
+}
+.whats{
+    background-color: #d9e8eb;
+    padding: 5% 1% 0% 1%;
+    margin-right: -1.1%;
+}
+.news{
+    background-color: #f0f0f2;
+    padding: 5% 1% 0% 5%;
+}
+.news p{
+    padding-bottom: 5%;
+}
 footer{
     background-color: #282828;
     color: #ccc;
-    padding-top: 5%;
+    padding-top: 1%;
 }
 .dflex{
     display: flex;
@@ -32,47 +47,10 @@ hr{
     color: #3f51b5;
     transition: ease-in-out 0.5s;
 }
-.form{
+/* .form{
     display: flex;
     height: auto;
-}
-.newsletter{
-    width: 50%;
-    height: 100%;
-    max-width: 50%;
-    min-width: 50%;
-    background-color: #f0f0f2;
-    padding: 3% 0 3% 3%;
-    word-wrap: break-word; 
-    overflow: auto;
-}
-.whatsapp{
-    height: 100%;
-    background-color: #d9e8eb;
-    width: 50%;
-    max-width: 50%;
-    min-width: 50%;
-    overflow: auto;
-    padding: 3% 0 4.3% 3%;
-    word-wrap: break-word;
-}
-.whatsapp mat-checkbox{
-    padding: 0 5px;
-}
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-}
-.example-full-width {
-    width: 100%;
-}
-td {
-    padding-right: 8px;
-}
-.form{
-    position: relative;
-    bottom: 0;
-    top: 0;
-    margin-bottom: -5%;
+} */
+.whats mat-checkbox{
+    padding: 1% 3%;
 }

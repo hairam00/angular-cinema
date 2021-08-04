@@ -1,11 +1,12 @@
 <h2 mat-dialog-title>LogIn</h2>
+<form class="example-form" (submit)="login()">
 <mat-dialog-content class="mat-typography">
     <div class="container">
         <img src="../../../assets/logo.png" alt="logo">
         <h1>Login</h1>
         <div class="spacebar"></div>
         <br>
-        <form class="example-form">
+        
             <mat-form-field class="example-full-width" appearance="fill" style="width: 90%;">
                 <mat-label>Email</mat-label>
                 <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com" [(ngModel)]="email" name="email" id="email" required>
@@ -22,12 +23,13 @@
                 <input matInput type="password" [(ngModel)]="password" name="password" id="password" required>
                 </mat-form-field>
             <p>Forgot your Password???</p>
-            <p>Not a member? <button mat-button color="primary" (click)="signupDialog()">Sign up now</button> </p>
-          </form>
+            <p>Not a member? <a mat-button color="primary" (click)="signupDialog()">Sign up now</a> </p>
+          <!-- </form> -->
         <br>
     </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button [mat-dialog-close]="false">Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary" (click)="login()">Login</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary" type="submit" (click)="login()">Login</button>
 </mat-dialog-actions>
+</form>

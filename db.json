@@ -24,6 +24,14 @@
       "code": "0301",
       "number": "4277187",
       "password": "hairam123"
+    },
+    {
+      "id": 2,
+      "name": "Dr.Hairam",
+      "email": "hairamirshad@gmail.com",
+      "code": "0304",
+      "number": "4277187",
+      "password": "qwerty"
     }
   ],
   "movies": [
@@ -264,73 +272,73 @@
       "id": 6
     }
   ],
-  "offers":[
+  "offers": [
     {
       "id": 1,
-      "valid_till":"07, August 2019",
+      "valid_till": "07, August 2019",
       "applicable": "Ring of Pakistan",
       "image": "offer1.jpg",
       "validation": "previous"
     },
     {
       "id": 2,
-      "valid_till":"02, January 2019",
+      "valid_till": "02, January 2019",
       "applicable": "Ring of Pakistan",
       "image": "offer2.jpg",
       "validation": "previous"
     },
     {
       "id": 3,
-      "valid_till":"02, January 2019",
+      "valid_till": "02, January 2019",
       "applicable": "Ring of Pakistan",
       "image": "offer3.jpg",
       "validation": "previous"
     },
     {
       "id": 4,
-      "valid_till":"07, December 2018",
+      "valid_till": "07, December 2018",
       "applicable": "Ring of Pakistan",
       "image": "offer4.jpg",
       "validation": "previous"
     },
     {
       "id": 5,
-      "valid_till":"17, November 2018",
+      "valid_till": "17, November 2018",
       "applicable": "Ring of Pakistan",
       "image": "offer5.jpg",
       "validation": "previous"
     },
     {
       "id": 6,
-      "valid_till":"09, December 2018",
+      "valid_till": "09, December 2018",
       "applicable": "Ring of Pakistan",
       "image": "offer6.jpg",
       "validation": "previous"
     },
     {
       "id": 7,
-      "valid_till":"09, December 2018",
+      "valid_till": "09, December 2018",
       "applicable": "Ring of Pakistan",
       "image": "offer7.jpg",
       "validation": "previous"
     },
     {
       "id": 8,
-      "valid_till":"09, December 2018",
+      "valid_till": "09, December 2018",
       "applicable": "Ring of Pakistan",
       "image": "offer8.jpg",
       "validation": "previous"
     },
     {
       "id": 9,
-      "valid_till":"09, December 2018",
+      "valid_till": "09, December 2018",
       "applicable": "Ring of Pakistan",
       "image": "offer9.jpg",
       "validation": "previous"
     },
     {
       "id": 10,
-      "valid_till":"09, December 2018",
+      "valid_till": "09, December 2018",
       "applicable": "Ring of Pakistan",
       "image": "offer10.jpg",
       "validation": "previous"

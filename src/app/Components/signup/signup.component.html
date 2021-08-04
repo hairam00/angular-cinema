@@ -1,3 +1,4 @@
+<form class="example-form" (submit)="createProduct()">
 <h2 mat-dialog-title>Sign Up</h2>
 <mat-dialog-content class="mat-typography">
     <div class="container">
@@ -5,7 +6,7 @@
         <h1>Join bookitnow.pk</h1>
         <div class="spacebar"></div>
         <br>
-        <form class="example-form">
+        
             <mat-form-field class="example-full-width" appearance="fill" style="width: 100%;">
                 <mat-label>Full Name</mat-label>
                 <input matInput type="text" [(ngModel)]="users.name" name="name" id="name" required>
@@ -54,12 +55,12 @@
                 <mat-label>Password</mat-label>
                 <input matInput type="password" [(ngModel)]="users.password" name="password" id="password" required>
             </mat-form-field>
-            <p>Already a member?  <button mat-button color="primary" (click)="signIn()" >Sign in Now</button> </p>
-          </form>
+            <p>Already a member?  <a mat-button color="primary" (click)="signIn()" >Sign in Now</a> </p>
         <br>
     </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button [mat-dialog-close]="false">Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary" (click)="createProduct()">Sign Up</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary" type="submit" (click)="createProduct()">Sign Up</button>
 </mat-dialog-actions>
+</form>

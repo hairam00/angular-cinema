@@ -8,6 +8,7 @@
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Email</mat-label>
                         <input type="email" matInput formControlName="emailFormControl" placeholder="Ex. pat@example.com" [(ngModel)]="newsLetter.email" name="email" id="email">
+                        <mat-icon matPrefix >mail_outline</mat-icon>
                     </mat-form-field>
                 </div>
                 <div class="col">
@@ -63,6 +64,7 @@
                     <mat-form-field appearance="fill">
                         <mat-label>Your Number</mat-label>
                         <input matInput #postalCode maxlength="11" placeholder="Your Number" [(ngModel)]="whatsapp.number" name="number" id="number" formControlName="whatsappNumber">
+                        <mat-icon matPrefix >phone</mat-icon>
                         <mat-hint align="end">{{postalCode.value.length}} / 11</mat-hint>
                     </mat-form-field>
                 </div>

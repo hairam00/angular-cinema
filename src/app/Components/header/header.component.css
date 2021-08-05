@@ -9,7 +9,8 @@ header{
 .right{
     position: relative;
     right: -25%;
-}header .img{
+}
+header .img{
     align-content: center;
     text-align: center;
 }
@@ -18,7 +19,10 @@ header .img img{
     border-bottom: solid 5px #ca191f;
     padding: 13% 0%;
 }
-button, a{
+.drop button{
+    margin: 0px 0px 0px 0px !important;
+}
+.spacing{
     margin: 8px 8px 8px 8px;
 }
 .col{

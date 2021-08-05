@@ -4,20 +4,20 @@
             <div class="row">
                 <div class="col border-bottom">
                     <img src="../../../assets/logo-small.ico" [routerLink]="['/']">
-                    <a mat-button routerLink="about">About Us</a>
-                    <a mat-button routerLink="contact">Contact Us</a>
+                    <a class="spacing" mat-button routerLink="about">About Us</a>
+                    <a class="spacing" mat-button routerLink="contact">Contact Us</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <button mat-stroked-button style="margin-left: 8px;" [routerLink]="['/events']">Events</button>
-                    <button mat-stroked-button  [matMenuTriggerFor]="movieMenu">Movies <i class="material-icons">arrow_drop_down</i></button>
-                    <mat-menu #movieMenu="matMenu">
+                    <button mat-stroked-button class="spacing" style="margin-left: 8px;" [routerLink]="['/events']">Events</button>
+                    <button mat-stroked-button class="spacing" [matMenuTriggerFor]="movieMenu">Movies <i class="material-icons">arrow_drop_down</i></button>
+                    <mat-menu class="drop" #movieMenu="matMenu">
                         <button mat-menu-item [routerLink]="['/all-movies']">All Movies</button>
                         <button mat-menu-item [routerLink]="['/all-movies/upcoming']">Coming Soon</button>
                         <button mat-menu-item [routerLink]="['/all-movies/now-showing']">Now Showing</button>
                     </mat-menu>
-                    <button mat-stroked-button [routerLink]="['/offers']">Offers</button>
+                    <button class="spacing" mat-stroked-button [routerLink]="['/offers']">Offers</button>
                 </div>
             </div>
         </div>
@@ -27,21 +27,21 @@
         <div class="col-5">
             <div class="row border-bottom">
                 <div class="col right">
-                    <a *ngIf="user == ''" mat-button (click)="signIn()">Sign In</a>
-                    <a *ngIf="user == ''" mat-button (click)="signupDialog()">Sign Up</a>
-                    <a *ngIf="user != ''" mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon>{{user}}</a>
+                    <a class="spacing" *ngIf="user == ''" mat-button (click)="signIn()">Sign In</a>
+                    <a class="spacing" *ngIf="user == ''" mat-button (click)="signupDialog()">Sign Up</a>
+                    <a class="spacing" *ngIf="user != ''" mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon>{{user}}</a>
                     <mat-menu #menu="matMenu">
-                    <button mat-menu-item (click)="logout()">Sign out</button>
+                    <button class="spacing" mat-menu-item (click)="logout()">Sign out</button>
                     </mat-menu>
-                    <a mat-button (click)="location()" style="width: 17% !important; font-size: smaller;">
+                    <a class="spacing" mat-button (click)="location()" style="width: 17% !important; font-size: smaller;">
                         {{city}} <mat-icon> location_on</mat-icon>
                     </a>
                 </div>
             </div>
             <div class="row">
                 <div class="col right">
-                    <button mat-stroked-button (click)="trackingCode()">Tracking Order</button>
-                    <button mat-stroked-button routerLink="create-event">Create your event</button>
+                    <button class="spacing" mat-stroked-button (click)="trackingCode()">Tracking Order</button>
+                    <button class="spacing" mat-stroked-button routerLink="create-event">Create your event</button>
                 </div>
             </div>
         </div>

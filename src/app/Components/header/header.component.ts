@@ -51,11 +51,7 @@ export class HeaderComponent implements OnInit {
     });
   }
   signupDialog(){
-    const dialogRef = this.dialog.open(SignupComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    this.dialog.open(SignupComponent);
   }
   trackingCode(){
     const dialogRef = this.dialog.open(TrackingCodeComponent, {

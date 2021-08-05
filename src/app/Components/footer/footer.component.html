@@ -4,14 +4,14 @@
         <p>Signup for the latest news about Movies & Events and exclusive offers.</p>
         <form novalidate [formGroup]="newsForm" #newsDirective="ngForm">
             <div class="row">
-                <div class="col">
+                <div class="col-5">
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Email</mat-label>
                         <input type="email" matInput formControlName="emailFormControl" placeholder="Ex. pat@example.com" [(ngModel)]="newsLetter.email" name="email" id="email">
                         <mat-icon matPrefix >mail_outline</mat-icon>
                     </mat-form-field>
                 </div>
-                <div class="col">
+                <div class="col-5">
                     <mat-form-field appearance="fill">
                         <mat-label>Select City</mat-label>
                         <mat-select [(value)]="newsLetterCity" [(ngModel)]="newsLetter.city" name="city" id="city" formControlName="newsCity">
@@ -28,7 +28,7 @@
                         </mat-select>
                     </mat-form-field>
                 </div>
-                <div class="col">
+                <div class="col-2 padding-0">
                     <button mat-raised-button color="warn" (click)="createNews(newsDirective)">SUBSCRIBE</button>
                 </div>
             </div>
@@ -43,9 +43,9 @@
             <mat-checkbox class="example-margin" color="primary" [(ngModel)]="whatsapp.events" name="events" id="events" formControlName="upcoming">Upcoming Events</mat-checkbox>
             <mat-checkbox class="example-margin" color="primary" [(ngModel)]="whatsapp.blogs" name="blogs" id="blogs" formControlName="blogs">Blogs</mat-checkbox>
             <div class="row">
-                <div class="col">
+                <div class="col-5">
                     <mat-form-field appearance="fill">
-                        <mat-label>Select an option</mat-label>
+                        <mat-label>Select City</mat-label>
                         <mat-select [(value)]="whatsappCity" [(ngModel)]="whatsapp.city" name="city" id="city" formControlName="whatsappsCity">
                             <mat-option>None</mat-option>
                             <mat-option value="Lahore">Lahore</mat-option>
@@ -60,7 +60,7 @@
                         </mat-select>
                         </mat-form-field>
                 </div>
-                <div class="col">
+                <div class="col-5 padding-0">
                     <mat-form-field appearance="fill">
                         <mat-label>Your Number</mat-label>
                         <input matInput #postalCode maxlength="11" placeholder="Your Number" [(ngModel)]="whatsapp.number" name="number" id="number" formControlName="whatsappNumber">
@@ -68,7 +68,7 @@
                         <mat-hint align="end">{{postalCode.value.length}} / 11</mat-hint>
                     </mat-form-field>
                 </div>
-                <div class="col">
+                <div class="col-2">
                     <button mat-raised-button color="primary" (click)="createWhatsapp(formDirective)">SUBSCRIBE</button>
                 </div>
             </div>

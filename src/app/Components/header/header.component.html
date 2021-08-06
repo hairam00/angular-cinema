@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col border-bottom">
                     <img src="../../../assets/logo-small.ico" [routerLink]="['/index']">
-                    <a class="spacing" mat-button routerLink="about">About Us</a>
-                    <a class="spacing" mat-button routerLink="contact">Contact Us</a>
+                    <button class="spacing" mat-button routerLink="about">About Us</button>
+                    <button class="spacing" mat-button routerLink="contact">Contact Us</button>
                 </div>
             </div>
             <div class="row">
@@ -27,15 +27,15 @@
         <div class="col-5">
             <div class="row border-bottom">
                 <div class="col right">
-                    <a class="spacing" *ngIf="user == ''" mat-button (click)="signIn()">Sign In</a>
-                    <a class="spacing" *ngIf="user == ''" mat-button (click)="signupDialog()">Sign Up</a>
-                    <a class="spacing" *ngIf="user != ''" mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon>{{user}}</a>
+                    <button class="spacing" *ngIf="user == ''" mat-button (click)="signIn()">Sign In</button>
+                    <button class="spacing" *ngIf="user == ''" mat-button (click)="signupDialog()">Sign Up</button>
+                    <button class="spacing" *ngIf="user != ''" mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon>{{user}}</button>
                     <mat-menu #menu="matMenu">
                     <button class="spacing" mat-menu-item (click)="logout()">Sign out</button>
                     </mat-menu>
-                    <a class="spacing" mat-button (click)="location()" style="width: 17% !important; font-size: smaller;">
+                    <button class="spacing" mat-button (click)="location()" style="width: 17% !important; font-size: smaller;">
                         {{city}} <mat-icon> location_on</mat-icon>
-                    </a>
+                    </button>
                 </div>
             </div>
             <div class="row">

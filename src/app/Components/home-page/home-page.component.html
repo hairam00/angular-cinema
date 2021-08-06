@@ -31,7 +31,7 @@
 <div class="container">
   <div class="featured-header space-between">
     <h1>POPULAR MOVIES</h1>
-    <button class="raise" mat-flat-button color="primary" [routerLink]="['/all-movies']" >View All Movies</button>
+    <button class="raise" mat-flat-button color="warn" [routerLink]="['/all-movies']" >View All Movies</button>
   </div> <br>
   <div class="cards">
     <!-- <mat-card class="example-card" *ngFor="let item of data" [routerLink]="['/movies', item.id ,item.name]"> -->
@@ -53,20 +53,20 @@
   <div class="featured container">
     <div class="featured-header space-between">
       <h1>FEATURED EVENTS</h1>
-      <button class="raise" mat-flat-button color="primary" [routerLink]="['/events']">SEE ALL EVENTS</button>
+      <button class="raise" mat-flat-button color="warn" [routerLink]="['/events']">SEE ALL EVENTS</button>
     </div>
     <div class="cards">
       <div class="event-card">
         <img src="../../../assets/{{eventData[0].image}}" alt="test-event">
         <p>{{eventData[0].date}} | {{eventData[0].city}}</p>
         <h5>{{eventData[0].name}}</h5>
-        <button class="raise" mat-flat-button color="primary" [routerLink]="['/events', eventData[0].id , eventData[0].name]">Read more</button>
+        <button class="raise" mat-flat-button color="warn" [routerLink]="['/events', eventData[0].id , eventData[0].name]">Read more</button>
       </div>
       <div class="event-card">
         <img src="../../../assets/{{eventData[1].image}}" alt="indie">
         <p>{{eventData[1].date}} | {{eventData[1].city}}</p>
         <h6>{{eventData[1].name}}</h6>
-        <button class="raise" mat-flat-button color="primary" [routerLink]="['/events', eventData[1].id , eventData[1].name]">Read more</button>
+        <button class="raise" mat-flat-button color="warn" [routerLink]="['/events', eventData[1].id , eventData[1].name]">Read more</button>
       </div>
     </div>
   </div>
@@ -127,17 +127,17 @@
     <div class="left">
       <h4>WHAT IS BOOKINOW.PK?</h4>
       <p>We , Bookitnow.pk , are a team to provide you with your One Stop Entertainment Solution.</p>
-      <button mat-stroked-button color="primary" [routerLink]="['/about']">Read More</button>
+      <button mat-raised-button color="warn" [routerLink]="['/about']">Read More</button>
     </div>
     <div class="center">
       <h4>WHAT WE DO ?</h4>
       <p>Online portal that has made buying tickets online easy with simple steps without unnecessary frills.</p>
-      <button mat-stroked-button color="primary" [routerLink]="['/about']">Read More</button>
+      <button mat-raised-button color="warn" [routerLink]="['/about']">Read More</button>
     </div>
     <div class="right">
       <h4>BOOKITNOW.PK OFFERS ?</h4>
       <p>Event calendar of events happening all over Pakistan. include all categories.</p>
-      <button mat-stroked-button color="primary" [routerLink]="['/offers']">Read More</button>
+      <button mat-raised-button color="warn" [routerLink]="['/offers']">Read More</button>
     </div>
   </div>
 </section>

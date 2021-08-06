@@ -39,7 +39,8 @@ import { AllMoviesComponent } from './Components/all-movies/all-movies.component
 import { AllEventsComponent } from './Components/all-events/all-events.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BookingComponent } from './Components/booking/booking.component';
-import { OffersComponent } from './Components/offers/offers.component'
+import { OffersComponent } from './Components/offers/offers.component';
+import { NotfoundComponent } from './Components/notfound/notfound.component'
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { OffersComponent } from './Components/offers/offers.component'
     AllEventsComponent,
     BookingComponent,
     OffersComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,

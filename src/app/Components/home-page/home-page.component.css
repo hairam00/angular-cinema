@@ -21,36 +21,6 @@ ngb-carousel .carousel-caption h3{
     max-width: 130%;
     margin: 1%;
 }
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #0c0d0ec2;
-    color: white;
-    text-align: center;
-    -webkit-transition: background-color 0.5s ease-in, opacity 0.5s ease-in; 
-    transition: background-color 0.5s ease-in, opacity 0.5s ease-in; 
-}
-.overlay a:hover{
-    color: #3f51b5;
-}
-.overlay button{
-    border: solid 1px #3f51b5;
-}
-.overlay mat-icon{
-    margin-left: -10%;
-    margin-top: 40%;
-    font-size: 48px;
-}
-.example-card:hover .overlay {
-    opacity: 1;
-}
 .space-between{
     display: flex;
     justify-content: space-between;
@@ -92,13 +62,9 @@ mat-grid-tile img{
     clip-path: polygon(0 0, 100% 0, 73% 100%, 0% 100%);
 }
 .left:hover{
-    background-color: #3f51b5;
+    background-color: #ca191f;
     color: white;
     transition: 1s ease-in-out;
-}
-.left:hover button{
-    color: white;
-    border: solid 1px white;
 }
 .bookitnow p{
     font-size: 12px;
@@ -110,13 +76,9 @@ mat-grid-tile img{
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 .center:hover{
-    background-color: #3f51b5;
+    background-color: #ca191f;
     color: white;
     transition: 1s ease-in-out;
-}
-.center:hover button{
-    color: white;
-    border: solid 1px white;
 }
 .right{
     color: black;
@@ -125,13 +87,9 @@ mat-grid-tile img{
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 .right:hover{
-    background-color: #3f51b5;
+    background-color: #ca191f;
     color: white;
     transition: 1s ease-in-out;
-}
-.right:hover button{
-    color: white;
-    border: solid 1px white;
 }
 .img-hover-zoom {
     overflow: hidden;

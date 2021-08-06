@@ -60,12 +60,12 @@
                 <input matInput type="password" [(ngModel)]="users.password" name="password" id="password" required>
                 <mat-icon matPrefix>lock</mat-icon>
             </mat-form-field>
-            <p>Already a member?  <a mat-button color="primary" (click)="signIn()" >Sign in Now</a> </p>
+            <p>Already a member?  <a mat-button color="warn" (click)="signIn()" >Sign in Now</a> </p>
         <br>
     </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button [mat-dialog-close]="false">Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary" type="submit" (click)="createProduct()">Sign Up</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="warn" type="submit" (click)="createProduct()">Sign Up</button>
 </mat-dialog-actions>
 </form>

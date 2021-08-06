@@ -7,6 +7,7 @@ import { ContactUsComponent } from './Components/contact-us/contact-us.component
 import { CreateEventComponent } from './Components/create-event/create-event.component';
 import { DetailViewComponent } from './Components/detail-view/detail-view.component';
 import { HomePageComponent } from './Components/home-page/home-page.component';
+import { NotfoundComponent } from './Components/notfound/notfound.component';
 import { OffersComponent } from './Components/offers/offers.component';
 
 const routes: Routes = [
@@ -20,7 +21,7 @@ const routes: Routes = [
   {path: ':type/:id/:name', component: DetailViewComponent},
   {path: 'events' , component: AllEventsComponent},
   {path: 'offers' , component: OffersComponent},
-  {path: '', redirectTo: 'index', pathMatch: 'full' }
+  {path: '**', component: NotfoundComponent }
 ];
 
 @NgModule({

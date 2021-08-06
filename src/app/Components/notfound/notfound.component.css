@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+.content{
+    text-align: center;
+    margin: 20% 5% 10% 5%;
+}
+.content h1{
+    font-size: 10em;
+    font-family: 'Palette Mosaic', cursive;
+    color: #ca191f;
+    margin-bottom: 0.7em;
+}
+.content h2{
+    font-family: 'Itim', cursive;
+}

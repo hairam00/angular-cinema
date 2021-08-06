@@ -68,7 +68,6 @@ seats: number = 0;
   }
   toggle(arr:any){
     this.selectedTime = arr;
-    console.warn(this.selectedTime);
     if(arr == 'slot1'){
       if(this.slot1 == true){
         document.getElementById(arr)?.classList.remove(arr)  

@@ -14,6 +14,7 @@ fromPage: string = '';
 fromDialog: string = '';
 movieData : any;
 selectedTime: string = '';
+disabled: boolean = true;
 // status: boolean = false;
 slot1: boolean = false;
 slot2: boolean = false;
@@ -21,6 +22,12 @@ slot3: boolean = false;
 slot4: boolean = false;
 slot5: boolean = false;
 slot6: boolean = false;
+disableSlot1: boolean = false;
+disableSlot2: boolean = false;
+disableSlot3: boolean = false;
+disableSlot4: boolean = false;
+disableSlot5: boolean = false;
+disableSlot6: boolean = false;
 
 bookDate: string = '';
 seats: number = 0;
@@ -59,14 +66,9 @@ seats: number = 0;
       this.openSnackBar(seats+ " Seats booked for "+ date + " at "+ data.timings,"x");
     }
   }
-  selectTime(slot:string){
-    this.selectedTime = slot;
-    // this.status = !this.status; 
-    console.warn(this.selectedTime);
-  }
   toggle(arr:any){
-    
-    console.log(arr);
+    this.selectedTime = arr;
+    console.warn(this.selectedTime);
     if(arr == 'slot1'){
       if(this.slot1 == true){
         document.getElementById(arr)?.classList.remove(arr)  
@@ -74,6 +76,11 @@ seats: number = 0;
         document.getElementById(arr)?.classList.add(arr);
       }
       this.slot1=!this.slot1;
+      this.disableSlot2 = !this.disableSlot2;
+      this.disableSlot3 = !this.disableSlot3;
+      this.disableSlot4 = !this.disableSlot4;
+      this.disableSlot5 = !this.disableSlot5;
+      this.disableSlot6 = !this.disableSlot6;
     }
     if(arr == 'slot2'){
       if(this.slot2 == true){
@@ -82,6 +89,11 @@ seats: number = 0;
         document.getElementById(arr)?.classList.add(arr);
       }
       this.slot2 =!this.slot2;
+      this.disableSlot1 = !this.disableSlot1;
+      this.disableSlot3 = !this.disableSlot3;
+      this.disableSlot4 = !this.disableSlot4;
+      this.disableSlot5 = !this.disableSlot5;
+      this.disableSlot6 = !this.disableSlot6
     }
     if(arr == 'slot3'){
       if(this.slot3 == true){
@@ -90,6 +102,11 @@ seats: number = 0;
         document.getElementById(arr)?.classList.add(arr);
       }
       this.slot3 =!this.slot3;
+      this.disableSlot2 = !this.disableSlot2;
+      this.disableSlot1 = !this.disableSlot1;
+      this.disableSlot4 = !this.disableSlot4;
+      this.disableSlot5 = !this.disableSlot5;
+      this.disableSlot6 = !this.disableSlot6
     }
     if(arr == 'slot4'){
       if(this.slot4 == true){
@@ -98,6 +115,11 @@ seats: number = 0;
         document.getElementById(arr)?.classList.add(arr);
       }
       this.slot4 =!this.slot4;
+      this.disableSlot2 = !this.disableSlot2;
+      this.disableSlot3 = !this.disableSlot3;
+      this.disableSlot1 = !this.disableSlot1;
+      this.disableSlot5 = !this.disableSlot5;
+      this.disableSlot6 = !this.disableSlot6
     }
     if(arr == 'slot5'){
       if(this.slot5 == true){
@@ -106,6 +128,11 @@ seats: number = 0;
         document.getElementById(arr)?.classList.add(arr);
       }
       this.slot5 =!this.slot5;
+      this.disableSlot2 = !this.disableSlot2;
+      this.disableSlot3 = !this.disableSlot3;
+      this.disableSlot4 = !this.disableSlot4;
+      this.disableSlot1 = !this.disableSlot1;
+      this.disableSlot6 = !this.disableSlot6
     }
     if(arr == 'slot6'){
       if(this.slot6 == true){
@@ -113,7 +140,12 @@ seats: number = 0;
       }else{
         document.getElementById(arr)?.classList.add(arr);
       }
-      this.slot6 =!this.slot6
+      this.slot6 =!this.slot6;
+      this.disableSlot2 = !this.disableSlot2;
+      this.disableSlot3 = !this.disableSlot3;
+      this.disableSlot4 = !this.disableSlot4;
+      this.disableSlot5 = !this.disableSlot5;
+      this.disableSlot1 = !this.disableSlot1
     }
   }
 }

@@ -26,9 +26,9 @@
             <li>
                 <button mat-stroked-button class="spacing" [matMenuTriggerFor]="movieMenu">Movies <i class="material-icons">arrow_drop_down</i></button>
                 <mat-menu class="drop" #movieMenu="matMenu">
-                        <button mat-menu-item [routerLink]="['/all-movies']">All Movies</button>
-                        <button mat-menu-item [routerLink]="['/all-movies/upcoming']">Coming Soon</button>
-                        <button mat-menu-item [routerLink]="['/all-movies/now-showing']">Now Showing</button>
+                    <button mat-menu-item [routerLink]="['/all-movies']">All Movies</button>
+                    <button mat-menu-item [routerLink]="['/all-movies/upcoming']">Coming Soon</button>
+                    <button mat-menu-item [routerLink]="['/all-movies/now-showing']">Now Showing</button>
                 </mat-menu>
             </li>
             <li>

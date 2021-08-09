@@ -3,11 +3,14 @@
     color: white;
     padding-top: 5%;
     padding-bottom: 5%;
+    margin-right: 0;
+    width: 100%;
 }
 .info{
     display: flex;
     justify-content: space-between;
     text-align: center;
+    width: 100%;
 }
 .info mat-icon{
     color: #ca191f;

@@ -1,5 +1,57 @@
-<header>
-    <div class="row">
+<nav>
+    <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+        <a [routerLink]="['/index']"><img src="../../../assets/logo.png" alt="logo"></a>
+    </div>
+  </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+    <div class="nav-links">
+        <ul>
+            <li>
+                <button class="spacing" mat-stroked-button routerLink="about">About Us</button>
+            </li>
+            <li>
+                <button class="spacing" mat-stroked-button routerLink="contact">Contact Us</button>
+            </li>
+            <li>
+                <button mat-stroked-button class="spacing" style="margin-left: 8px;" [routerLink]="['/events']">Events</button>
+            </li>
+            <li>
+                <button mat-stroked-button class="spacing" [matMenuTriggerFor]="movieMenu">Movies <i class="material-icons">arrow_drop_down</i></button>
+                <mat-menu class="drop" #movieMenu="matMenu">
+                        <button mat-menu-item [routerLink]="['/all-movies']">All Movies</button>
+                        <button mat-menu-item [routerLink]="['/all-movies/upcoming']">Coming Soon</button>
+                        <button mat-menu-item [routerLink]="['/all-movies/now-showing']">Now Showing</button>
+                </mat-menu>
+            </li>
+            <li>
+                <button class="spacing" mat-stroked-button [routerLink]="['/offers']">Offers</button>
+            </li>
+            <li *ngIf="user == ''">
+                <button class="spacing"  mat-stroked-button (click)="signIn()">Sign In</button>
+            </li>
+            <li *ngIf="user == ''">
+                <button class="spacing"  mat-stroked-button (click)="signupDialog()">Sign Up</button>
+            </li>
+            <li *ngIf="user != ''">
+                <button class="spacing"  mat-stroked-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon>{{user}}</button>
+            </li>
+            <li>
+                <button class="spacing" mat-stroked-button (click)="trackingCode()">Tracking Order</button>
+            </li>
+            <li>
+                <button class="spacing" mat-stroked-button routerLink="create-event">Create your event</button>
+            </li>
+        </ul>
+    </div>
+    <div class="row desktop">
         <div class="col-5">
             <div class="row">
                 <div class="col border-bottom">
@@ -46,4 +98,4 @@
             </div>
         </div>
     </div>
-</header>
+</nav>

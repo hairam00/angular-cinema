@@ -21,6 +21,7 @@ const routes: Routes = [
   {path: ':type/:id/:name', component: DetailViewComponent},
   {path: 'events' , component: AllEventsComponent},
   {path: 'offers' , component: OffersComponent},
+  {path : '', redirectTo: '/index', pathMatch: 'full'},
   {path: '**', component: NotfoundComponent }
 ];
 

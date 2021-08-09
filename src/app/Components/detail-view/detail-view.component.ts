@@ -44,7 +44,6 @@ export class DetailViewComponent implements OnInit {
   getMoviesById(){
     this.restService.getMovie(this.movieId).subscribe(resp =>{
       this.data = resp[0];
-      console.log(this.data);
       if(this.data.summary == '' ){
         this.data.summary = 'No synopsis found for this movie yet.';
       } 

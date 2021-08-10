@@ -39,7 +39,6 @@ export class DetailViewComponent implements OnInit {
       width: '50%',
       data: { idMovies: this.movieId, routeParam: this.type }
     });
-    console.log("detail route: " + this.type)
   }
 
   getMoviesById(){

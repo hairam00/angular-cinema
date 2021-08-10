@@ -44,31 +44,19 @@ export class HeaderComponent implements OnInit {
     this._snackBar.open(message, action);
   }
   signIn(){
-    const dialogRef = this.dialog.open(LoginComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    this.dialog.open(LoginComponent);
   }
   signupDialog(){
     this.dialog.open(SignupComponent);
   }
   trackingCode(){
-    const dialogRef = this.dialog.open(TrackingCodeComponent, {
+    this.dialog.open(TrackingCodeComponent, {
       height: '80%',
       width: '50%',
     });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
   }
   location(){
-    const dialogRef = this.dialog.open(LocationComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    this.dialog.open(LocationComponent);
   }
   logout(){
     this.user = '';

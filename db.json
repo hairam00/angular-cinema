@@ -202,7 +202,8 @@
       "summary": "",
       "user_review": "",
       "critic": "",
-      "videos": ""
+      "videos": "",
+      "release": ""
     },
     {
       "id": 2,
@@ -214,7 +215,8 @@
       "summary": "",
       "user_review": "",
       "critic": "",
-      "videos": ""
+      "videos": "",
+      "release": ""
     },
     {
       "id": 3,
@@ -226,7 +228,8 @@
       "summary": "",
       "user_review": "",
       "critic": "",
-      "videos": ""
+      "videos": "",
+      "release": "Now"
     },
     {
       "id": 4,
@@ -238,7 +241,8 @@
       "summary": "",
       "user_review": "",
       "critic": "",
-      "videos": ""
+      "videos": "",
+      "release": "Now"
     },
     {
       "id": 5,
@@ -250,7 +254,8 @@
       "summary": "",
       "user_review": "",
       "critic": "",
-      "videos": ""
+      "videos": "",
+      "release": "Now"
     },
     {
       "id": 6,
@@ -262,7 +267,8 @@
       "summary": "",
       "user_review": "",
       "critic": "",
-      "videos": ""
+      "videos": "",
+      "release": "Now"
     },
     {
       "id": 7,
@@ -274,7 +280,8 @@
       "summary": "",
       "user_review": "",
       "critic": "",
-      "videos": ""
+      "videos": "",
+      "release": "Now"
     }
   ],
   "bookings": [

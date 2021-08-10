@@ -32,19 +32,15 @@ bookDate: string = '';
 seats: number = 0;
   constructor(public dialogRef: MatDialogRef<BookingComponent>,
     @Optional() @Inject(MAT_DIALOG_DATA) public data: any, private rest: RestService, private _snackBar: MatSnackBar) { 
-      console.warn("Route: "  + data.routeParam);
       if(data.routeParam == 'events'){
-        console.warn("events route trigger");
         this.getEventByID(data.idMovies);
       }
       if(data.routeParam == 'movies'){
-        console.warn("movies route trigger");
         this.getMovieByID(data.idMovies);
       }
     }
 
   ngOnInit(): void {
-    console.log(this.selectedTime);
   }
 
   openSnackBar(message: string, action: string) {

@@ -35,11 +35,11 @@
   </div> <br>
   <div class="cards">
   <div class="view view-first" *ngFor="let item of data" [routerLink]="['/movies', item.id ,item.name]">
-    <img src="../assets/{{item.image}}">
+    <img src="../assets/{{item?.image}}">
     <div class="mask">
       <mat-icon>play_circle_outline</mat-icon>
-      <h2>{{item.name}}</h2>
-      <p>{{item.category}}</p>
+      <h2>{{item?.name}}</h2>
+      <p>{{item?.category}}</p>
       <button mat-raised-button color="warn">Read More</button>
     </div>
   </div>
@@ -54,13 +54,13 @@
     </div>
     <div class="cards">
       <div class="event-card">
-        <img src="../../../assets/{{eventData[0].image}}" alt="test-event">
+        <img src="../../../assets/{{eventData[0]?.image}}" alt="test-event">
         <p>{{eventData[0].date}} | {{eventData[0].city}}</p>
         <h5>{{eventData[0].name}}</h5>
         <button class="raise" mat-flat-button color="warn" [routerLink]="['/events', eventData[0].id , eventData[0].name]">Read more</button>
       </div>
       <div class="event-card">
-        <img src="../../../assets/{{eventData[1].image}}" alt="indie">
+        <img src="../../../assets/{{eventData[1]?.image}}" alt="indie">
         <p>{{eventData[1].date}} | {{eventData[1].city}}</p>
         <h6>{{eventData[1].name}}</h6>
         <button class="raise" mat-flat-button color="warn" [routerLink]="['/events', eventData[1].id , eventData[1].name]">Read more</button>

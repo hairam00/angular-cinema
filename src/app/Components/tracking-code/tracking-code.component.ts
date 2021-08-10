@@ -27,7 +27,6 @@ export class TrackingCodeComponent implements OnInit {
           this.getEventByID(response[i]["ticket_id"]);
         }
       }
-      console.warn(this.movieData);
     })
   }
   getMovieById(id:string){

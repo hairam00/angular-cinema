@@ -5,7 +5,7 @@
 <div class="dflex">
     <div class="imgbar">
         <img src="../../../assets/{{data?.image}}" >
-        <button mat-raised-button color="warn" (click)="openDialog()" [disabled]="data.release !='Now'">Book Now</button>
+        <button mat-raised-button color="warn" (click)="openDialog()" [disabled]="data?.release !='Now'">Book Now</button>
         <p>Reserve Your Seat Now</p>
     </div>
     <div class="tabs">

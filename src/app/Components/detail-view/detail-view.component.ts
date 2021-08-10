@@ -16,8 +16,8 @@ export class DetailViewComponent implements OnInit {
   carosul:any;
   type: string = '';
   showFiller = false;
+  pageTitle: string = '';
   constructor(private route: ActivatedRoute, private restService:RestService, private router: Router,public dialog: MatDialog,private title: Title) {
-    this.title.setTitle("Bookitnow - Details")
    }
   
   ngOnInit(): void {
@@ -25,10 +25,13 @@ export class DetailViewComponent implements OnInit {
     this.type = this.route.snapshot.params.type;
     if(this.type == 'movies'){
       this.getMoviesById();
+      console.log("dataName: " + this.data) ;
     }
     if(this.type == 'events'){
       this.getEvensById();
+      console.log("dataName: " + this.data) ;
     }
+    
     window.scrollTo(0, 0);
     this.restService.getMovieCarosul(7).subscribe(response => {
       this.carosul = response;
@@ -46,6 +49,8 @@ export class DetailViewComponent implements OnInit {
   getMoviesById(){
     this.restService.getMovie(this.movieId).subscribe(resp =>{
       this.data = resp[0];
+      this.pageTitle = "Bookitnow - " + this.data.name;
+      this.title.setTitle(this.pageTitle as string)
       if(this.data.summary == '' ){
         this.data.summary = 'No synopsis found for this movie yet.';
       } 
@@ -63,7 +68,8 @@ export class DetailViewComponent implements OnInit {
   getEvensById(){
     this.restService.getEventbyId(this.movieId).subscribe(eventResp => {
       this.data = eventResp[0];
-      console.warn(this.data);
+      this.pageTitle = "Bookitnow - " + this.data.name;
+      this.title.setTitle(this.pageTitle as string)
       if(this.data.summary == '' ){
         this.data.summary = 'No synopsis found for this event yet.';
       } 

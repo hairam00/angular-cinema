@@ -16,8 +16,8 @@ export class DetailViewComponent implements OnInit {
   carosul:any;
   type: string = '';
   showFiller = false;
-  constructor(private route: ActivatedRoute, private restService:RestService, private router: Router,public dialog: MatDialog,private titleService: Title) {
-    this.titleService.setTitle("Bookitnow - Details")
+  constructor(private route: ActivatedRoute, private restService:RestService, private router: Router,public dialog: MatDialog,private title: Title) {
+    this.title.setTitle("Bookitnow - Details")
    }
   
   ngOnInit(): void {
@@ -30,12 +30,9 @@ export class DetailViewComponent implements OnInit {
       this.getEvensById();
     }
     window.scrollTo(0, 0);
-    console.warn("name:  : " + this.data.name)
-
     this.restService.getMovieCarosul(7).subscribe(response => {
       this.carosul = response;
     });   
-    this.titleService.setTitle('Bookitnow - ' + this.data.name)
   }
 
   openDialog() {

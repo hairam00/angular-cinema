@@ -1,37 +1,37 @@
-<div  class="cover" *ngIf="data != 'undefined'" style="background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('../../../assets/{{data.image}}') ;">
+<div  class="cover" style="background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('../../../assets/{{data?.image}}') ;">
     <mat-icon class="play">play_circle_outline</mat-icon>
     
 </div>
 <div class="dflex">
     <div class="imgbar">
-        <img *ngIf="data != 'undefined'" src="../../../assets/{{data.image}}" >
+        <img src="../../../assets/{{data?.image}}" >
         <button mat-raised-button color="warn" (click)="openDialog()">Book Now</button>
         <p>Reserve Your Seat Now</p>
     </div>
     <div class="tabs">
-        <h1 *ngIf="data != 'undefined'">{{data.name}}</h1>
-        <span *ngIf="data != 'undefined'">{{data.location}}</span> <span *ngIf="data != 'undefined'">{{data.category}}</span> <br> 
-        <p *ngIf="data.date != 'undefined' || data.date != ''">Relase Date: {{data.date}}</p>
+        <h1>{{data?.name}}</h1>
+        <span>{{data?.location}}</span> <span>{{data?.category}}</span> <br> 
+        <p>Relase Date: {{data?.date}}</p>
         <mat-tab-group mat-align-tabs="center">
             <mat-tab label="Summary">
                <div class="containers">
                 <h4>SYNOPSIS</h4>
-                <h5 *ngIf="data != 'undefined'">{{data.summary}}</h5>
+                <h5>{{data?.summary}}</h5>
                </div>
             </mat-tab>
             <mat-tab label="User Reviews(0)">
                 <div class="containers">
-                   <h5 *ngIf="data !== 'undefined'"> {{data.user_review}}</h5>
+                   <h5> {{data?.user_review}}</h5>
                 </div>
             </mat-tab>
             <mat-tab label="Critic Reviews(0)">
                 <div class="containers">
-                    <h5 *ngIf="data != 'undefined'">{{data.critic}}</h5>
+                    <h5>{{data?.critic}}</h5>
                 </div>
             </mat-tab>
             <mat-tab label="Featured Videos">
                 <div class="containers">
-                    <h5 *ngIf="data != 'undefined'">{{data.videos}}</h5>
+                    <h5>{{data?.videos}}</h5>
                 </div>
             </mat-tab>
         </mat-tab-group>
@@ -44,7 +44,7 @@
         <hr>
         <carousel>
             <div class="carousel-cell" *ngFor="let movie of carosul">
-                <img *ngIf="movie != 'undefined'" src="../../../assets/{{movie.image}}" id="{{movie.id}}" name="{{movie.name}}" (click)="reload(movie.id,  movie.name)">
+                <img src="../../../assets/{{movie?.image}}" id="{{movie?.id}}" name="{{movie?.name}}" (click)="reload(movie.id,  movie.name)">
             </div>
         </carousel>
     </div>

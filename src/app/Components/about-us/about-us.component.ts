@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Title } from '@angular/platform-browser';
 import { LoginComponent } from '../login/login.component';
 import { SignupComponent } from '../signup/signup.component';
 
@@ -11,7 +12,8 @@ import { SignupComponent } from '../signup/signup.component';
 })
 
 export class AboutUsComponent implements OnInit {
-  constructor(public dialog: MatDialog) { 
+  constructor(public dialog: MatDialog, private title: Title) {
+    this.title.setTitle('Bookitnow - About') 
   }
 
   ngOnInit(): void {

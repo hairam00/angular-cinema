@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { RestService } from 'src/app/Services/rest.service';
 
 @Component({
@@ -9,7 +10,9 @@ import { RestService } from 'src/app/Services/rest.service';
 export class OffersComponent implements OnInit {
 previousOffer: any;
 currentOffer:any;
-  constructor(private rest: RestService) { }
+  constructor(private rest: RestService, private title: Title) {
+    this.title.setTitle('Bookitnow - Offers')
+   }
 
   ngOnInit(): void {
     window.scroll(0,0)

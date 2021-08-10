@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { RestService } from 'src/app/Services/rest.service';
 
 
@@ -10,7 +11,9 @@ import { RestService } from 'src/app/Services/rest.service';
 export class HomePageComponent implements OnInit {
   data: any;
   eventData: any;
-  constructor(private restService: RestService) { }
+  constructor(private restService: RestService, private title: Title) {
+    this.title.setTitle('Bookitnow')
+   }
 
   ngOnInit(): void {
     window.scrollTo(0, 0);

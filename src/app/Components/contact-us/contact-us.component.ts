@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Title } from '@angular/platform-browser';
 import { RestService } from 'src/app/Services/rest.service';
 
 @Component({
@@ -39,7 +40,9 @@ export class ContactUsComponent implements OnInit {
     subject: '',
     message: ''
   }
-  constructor(private restService: RestService, private _snackBar: MatSnackBar) { }
+  constructor(private restService: RestService, private _snackBar: MatSnackBar, private title: Title) {
+    this.title.setTitle('Bookitnow - Contact us')
+   }
 
   ngOnInit(): void {
     window.scrollTo(0, 0);

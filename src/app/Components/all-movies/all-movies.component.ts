@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { RestService } from 'src/app/Services/rest.service';
 
@@ -12,7 +13,9 @@ export class AllMoviesComponent implements OnInit {
 movies: any;
 hideFilter: boolean = false;
 @ViewChild('category', { static: true }) input: ElementRef | undefined;
-  constructor(private router: Router, private restService: RestService, private _snackBar: MatSnackBar) { }
+  constructor(private router: Router, private restService: RestService, private _snackBar: MatSnackBar, private title: Title) {
+    this.title.setTitle('Bookitnow - Movies')
+   }
   ngAfterViewInit() {
   }
   ngOnInit(): void {

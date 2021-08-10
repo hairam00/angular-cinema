@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-create-event',
@@ -19,7 +20,9 @@ export class CreateEventComponent implements OnInit {
   eventArray: Array<any> = [];
   eventAttribute: any = {};
 
-  constructor() { }
+  constructor(private title: Title) {
+    this.title.setTitle('Bookitnow - Create Event')
+   }
 
   ngOnInit(): void {
     window.scrollTo(0, 0);

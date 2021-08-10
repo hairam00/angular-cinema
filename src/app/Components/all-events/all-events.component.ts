@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Title } from '@angular/platform-browser';
 import { RestService } from 'src/app/Services/rest.service';
 
 @Component({
@@ -12,7 +13,9 @@ data: any;
 searchData: any;
 city: string = '';
 
-  constructor(private restService: RestService, private _snackBar: MatSnackBar) { }
+  constructor(private restService: RestService, private _snackBar: MatSnackBar, private title: Title) {
+    this.title.setTitle('Bookitnow - Events')
+   }
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);
   }

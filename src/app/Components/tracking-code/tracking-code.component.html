@@ -6,9 +6,10 @@
             </div>
             <div class="col-sm">
               <h1>{{item[0].name}}</h1>
-              <p >Seats: {{bookData[i].seats}}</p>
-              <p>Date: {{bookData[i].booking_date}}</p>
-              <p>Time: {{bookData[i].timings}}</p>
+              <p>Ticket For: <strong>{{bookData[i].booking_type}}</strong></p>
+              <p >Seats: <strong>{{bookData[i].seats}}</strong></p>
+              <p>Date: <strong>{{bookData[i].booking_date}}</strong></p>
+              <p *ngIf="bookData[i].booking_type == 'movies'">Time: <strong>{{bookData[i].timings}}</strong></p>
               <button mat-raised-button color="warn" (click)="delteBooking(bookData[i].id)">Cancel</button>
             </div>
         </div>

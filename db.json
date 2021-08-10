@@ -198,7 +198,11 @@
       "date": "July 08, 2021 - July 30, 2021",
       "location": "Lahore",
       "category": "SPORTS",
-      "image": "test-event.jpg"
+      "image": "test-event.jpg",
+      "summary": "",
+      "user_review": "",
+      "critic": "",
+      "videos": ""
     },
     {
       "id": 2,
@@ -206,7 +210,11 @@
       "date": "July 29, 2021",
       "location": "Multan",
       "category": "FESTIVAL",
-      "image": "CAMPBESTIVAL.jpg"
+      "image": "CAMPBESTIVAL.jpg",
+      "summary": "",
+      "user_review": "",
+      "critic": "",
+      "videos": ""
     },
     {
       "id": 3,
@@ -214,7 +222,11 @@
       "date": "September 04, 2021",
       "location": "Karachi",
       "category": "FESTIVAL",
-      "image": "FESTIVALOFLIGHTS.jpg"
+      "image": "FESTIVALOFLIGHTS.jpg",
+      "summary": "",
+      "user_review": "",
+      "critic": "",
+      "videos": ""
     },
     {
       "id": 4,
@@ -222,7 +234,11 @@
       "date": "September 11, 2021",
       "location": "Karachi",
       "category": "FESTIVAL",
-      "image": "DRAAIMOLENFESTIVAL.jpg"
+      "image": "DRAAIMOLENFESTIVAL.jpg",
+      "summary": "",
+      "user_review": "",
+      "critic": "",
+      "videos": ""
     },
     {
       "id": 5,
@@ -230,7 +246,11 @@
       "date": "November 04, 2021",
       "location": "Karachi",
       "category": "EXHIBITION",
-      "image": "2NDPNDSINTERNATIONAL.jpg"
+      "image": "2NDPNDSINTERNATIONAL.jpg",
+      "summary": "",
+      "user_review": "",
+      "critic": "",
+      "videos": ""
     },
     {
       "id": 6,
@@ -238,7 +258,11 @@
       "date": "November 06, 2021",
       "location": "Karachi",
       "category": "EXHIBITION",
-      "image": "THEKARACHIART.jpg"
+      "image": "THEKARACHIART.jpg",
+      "summary": "",
+      "user_review": "",
+      "critic": "",
+      "videos": ""
     },
     {
       "id": 7,
@@ -246,7 +270,11 @@
       "date": "December 18, 2021",
       "location": "Islamabad",
       "category": "FESTIVAL",
-      "image": "THEINDIEART.jpg"
+      "image": "THEINDIEART.jpg",
+      "summary": "",
+      "user_review": "",
+      "critic": "",
+      "videos": ""
     }
   ],
   "bookings": [
@@ -255,6 +283,7 @@
       "seats": "2",
       "ticket_id": 1,
       "timings": "10am",
+      "booking_type": "movies",
       "id": 4
     },
     {
@@ -262,13 +291,15 @@
       "seats": "2",
       "ticket_id": 2,
       "timings": "11pm",
+      "booking_type": "movies",
       "id": 5
     },
     {
-      "booking_date": "8/5/2021",
-      "seats": "5",
-      "ticket_id": 3,
-      "timings": "5pm",
+      "booking_date": "7/29/2021",
+      "seats": "2",
+      "ticket_id": 2,
+      "timings": "",
+      "booking_type": "events",
       "id": 6
     }
   ],

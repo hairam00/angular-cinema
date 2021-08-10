@@ -11,7 +11,7 @@
     <div class="tabs">
         <h1 *ngIf="data != 'undefined'">{{data.name}}</h1>
         <span *ngIf="data != 'undefined'">{{data.location}}</span> <span *ngIf="data != 'undefined'">{{data.category}}</span> <br> 
-        <p *ngIf="data.date != 'undefined' || data.date != ''">Relase Data {{data.date}}</p>
+        <p *ngIf="data.date != 'undefined' || data.date != ''">Relase Date: {{data.date}}</p>
         <mat-tab-group mat-align-tabs="center">
             <mat-tab label="Summary">
                <div class="containers">

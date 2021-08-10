@@ -20,7 +20,12 @@ export class TrackingCodeComponent implements OnInit {
     this.rest.getBookings().subscribe(response =>{
       this.bookData = response;
       for(let i=0; i < response.length; i++){
-        this.getMovieById(response[i]["ticket_id"]);
+        if(response[i]["booking_type"] == 'movies'){
+          this.getMovieById(response[i]["ticket_id"]);
+        }
+        if(response[i]["booking_type"] == 'events'){
+          this.getEventByID(response[i]["ticket_id"]);
+        }
       }
       console.warn(this.movieData);
     })
@@ -28,6 +33,11 @@ export class TrackingCodeComponent implements OnInit {
   getMovieById(id:string){
     this.rest.getMovie(id).subscribe(resp => {
       this.movieData.push(resp)
+    })
+  }
+  getEventByID(id: string){
+    this.rest.getEventbyId(id).subscribe(res => {
+      this.movieData.push(res)
     })
   }
   delteBooking(id:number){

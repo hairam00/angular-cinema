@@ -35,10 +35,11 @@ export class DetailViewComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(BookingComponent,{
-      height: '80%',
+      height: '75%',
       width: '50%',
-      data: { idMovies: this.movieId }
+      data: { idMovies: this.movieId, routeParam: this.type }
     });
+    console.log("detail route: " + this.type)
   }
 
   getMoviesById(){
@@ -63,13 +64,13 @@ export class DetailViewComponent implements OnInit {
       this.data = eventResp[0];
       console.warn(this.data);
       if(this.data.summary == '' ){
-        this.data.summary = 'No synopsis found for this movie yet.';
+        this.data.summary = 'No synopsis found for this event yet.';
       } 
       if(this.data.user_review == '' ){
-        this.data.user_review = 'No users have reviewed this movie yet.';
+        this.data.user_review = 'No users have reviewed this event yet.';
       } 
       if(this.data.critic == ''){
-        this.data.critic = "None of the Critics have reviewed this movie yet.";
+        this.data.critic = "None of the Critics have reviewed this event yet.";
       }
       if(this.data.videos == ''){
         this.data.videos = "No Video Found yet.";

@@ -13,9 +13,8 @@ id: any;
 fromPage: string = '';
 fromDialog: string = '';
 movieData : any;
-selectedTime: string = '';
+selectedTime: string | undefined = '';
 disabled: boolean = true;
-// status: boolean = false;
 slot1: boolean = false;
 slot2: boolean = false;
 slot3: boolean = false;
@@ -33,13 +32,21 @@ bookDate: string = '';
 seats: number = 0;
   constructor(public dialogRef: MatDialogRef<BookingComponent>,
     @Optional() @Inject(MAT_DIALOG_DATA) public data: any, private rest: RestService, private _snackBar: MatSnackBar) { 
-      this.getMovieByID(data.idMovies);
+      console.warn("Route: "  + data.routeParam);
+      if(data.routeParam == 'events'){
+        console.warn("events route trigger");
+        this.getEventByID(data.idMovies);
+      }
+      if(data.routeParam == 'movies'){
+        console.warn("movies route trigger");
+        this.getMovieByID(data.idMovies);
+      }
     }
 
   ngOnInit(): void {
     console.log(this.selectedTime);
-    
   }
+
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);
   }
@@ -48,26 +55,45 @@ seats: number = 0;
       this.movieData = res[0];
     });
   }
+  getEventByID(id:string){
+    this.rest.getEventbyId(id).subscribe(resp => {
+      this.movieData = resp[0];
+    });
+  }
   uploadBooking(date:string, seats:string){
     let data: any = {
       booking_date: date,
       seats: seats,
       ticket_id: this.movieData.id,
-      timings: this.selectedTime
+      timings: this.selectedTime,
+      booking_type: this.data.routeParam
     };
-    if(this.selectedTime == ''){
-      this.openSnackBar("Please Select Time slot","x");
-    }else if(date == ''){
-      this.openSnackBar("Please select Date", "x");
-    }else if(seats == ''){
-      this.openSnackBar("Please select seats", "x");
-    }else{
-      this.rest.uploadBooking(data).subscribe();
-      this.openSnackBar(seats+ " Seats booked for "+ date + " at "+ data.timings,"x");
+    if(this.data.routeParam == 'movies'){
+      if(this.selectedTime == ''){
+        this.openSnackBar("Please Select Time slot","x");
+      }else if(date == ''){
+        this.openSnackBar("Please select Date", "x");
+      }else if(seats == ''){
+        this.openSnackBar("Please select seats", "x");
+      }else{
+        this.rest.uploadBooking(data).subscribe();
+        this.openSnackBar(seats+ " Seats booked for "+ date + " at "+ data.timings,"x");
+      }
     }
+    if(this.data.routeParam == 'events'){
+      if(date == ''){
+        this.openSnackBar("Please select Date", "x");
+      }else if(seats == ''){
+        this.openSnackBar("Please select seats", "x");
+      }else{
+        this.rest.uploadBooking(data).subscribe();
+        this.openSnackBar(seats+ " Seats booked for "+ date ,"x");
+      }
+    }
+    
   }
-  toggle(arr:any){
-    this.selectedTime = arr;
+  toggle(arr:any, value:string){
+     this.selectedTime = value;
     if(arr == 'slot1'){
       if(this.slot1 == true){
         document.getElementById(arr)?.classList.remove(arr)  

@@ -11,10 +11,10 @@
       <td colspan="2">
         <div class="content">
           <h2 *ngIf="movieData != 'undefined'">{{ movieData.name }}</h2>
-          <p *ngIf="movieData != 'undefined'"><strong>Country :</strong> {{ movieData.country }}</p>
+          <p *ngIf="movieData != 'undefined'"><strong>Country :</strong> {{ movieData.location }}</p>
           <p *ngIf="movieData != 'undefined'"><strong>Category :</strong> {{ movieData.category }}</p>
-          <p *ngIf="movieData != 'undefined'"><strong>Date :</strong> {{ movieData.relase_date }}</p>
-          <p>
+          <p *ngIf="movieData != 'undefined'"><strong>Date :</strong> {{ movieData.date }}</p>
+          <p *ngIf="data.routeParam == 'movies'">
             <strong>Show Time :</strong>
             <input *ngIf="movieData != 'undefined'"
               type="button"
@@ -22,7 +22,7 @@
               #slot1
               id="slot1"
               value="{{ movieData.slot1 }}"
-              (click)="toggle(slot1.id)"
+              (click)="toggle(slot1.id, slot1.value)"
               [ngClass]="slot1 ? 'time' : 'slot1'"
               [disabled]="disableSlot1"/>
             <input *ngIf="movieData != 'undefined'"
@@ -31,7 +31,7 @@
               #slot2
               id="slot2"
               value="{{ movieData.slot2 }}"
-              (click)="toggle(slot2.id)"
+              (click)="toggle(slot2.id, slot2.value)"
               [ngClass]="slot2 ? 'time' : 'slot2'"
               [disabled]="disableSlot2"/>
             <input *ngIf="movieData != 'undefined'"
@@ -40,7 +40,7 @@
               #slot3
               id="slot3"
               value="{{ movieData.slot3 }}"
-              (click)="toggle(slot3.id)"
+              (click)="toggle(slot3.id, slot3.value)"
               [ngClass]="slot3 ? 'time' : 'slot3'"
               [disabled]="disableSlot3"/>
             <input *ngIf="movieData != 'undefined'"
@@ -49,7 +49,7 @@
               #slot4
               id="slot4"
               value="{{ movieData.slot4 }}"
-              (click)="toggle(slot4.id)"
+              (click)="toggle(slot4.id, slot4.value)"
               [ngClass]="slot4 ? 'time' : 'slot4'"
               [disabled]="disableSlot4"/>
             <input *ngIf="movieData != 'undefined'"
@@ -58,7 +58,7 @@
               #slot5
               id="slot5"
               value="{{ movieData.slot5 }}"
-              (click)="toggle(slot5.id)"
+              (click)="toggle(slot5.id, slot5.value)"
               [ngClass]="slot5 ? 'time' : 'slot5'"
               [disabled]="disableSlot5"/>
             <input *ngIf="movieData != 'undefined'"
@@ -67,14 +67,14 @@
               #slot6
               id="slot6"
               value="{{ movieData.slot6 }}"
-              (click)="toggle(slot6.id)"
+              (click)="toggle(slot6.id, slot6.value)"
               [ngClass]="slot6 ? 'time' : 'slot6'"
               [disabled]="disableSlot6"/>
           </p>
         </div>
       </td>
     </tr>
-    <tr>
+    <tr [ngClass]="{book: data.routeParam == 'events'}">
       <td>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Choose a date</mat-label>

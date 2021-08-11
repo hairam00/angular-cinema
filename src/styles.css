@@ -103,4 +103,8 @@ a:hover{
     box-shadow: 0 0.7em 0.7em -0.6em #484849;
     transform: translateY(-0.25em);
     transition: 0.5s;
-} 
+}
+.dialog-heading{
+    display: flex;
+    justify-content: space-between;  
+}

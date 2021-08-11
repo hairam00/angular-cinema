@@ -17,8 +17,7 @@ export class DetailViewComponent implements OnInit {
   type: string = '';
   showFiller = false;
   pageTitle: string = '';
-  constructor(private route: ActivatedRoute, private restService:RestService, private router: Router,public dialog: MatDialog,private title: Title) {
-   }
+  constructor(private route: ActivatedRoute, private restService:RestService, private router: Router,public dialog: MatDialog,private title: Title) {}
   
   ngOnInit(): void {
     this.movieId = this.route.snapshot.params.id;

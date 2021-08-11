@@ -313,10 +313,10 @@
   "offers": [
     {
       "id": 1,
-      "valid_till": "07, August 2019",
+      "valid_till": "27, August 2021",
       "applicable": "Ring of Pakistan",
       "image": "offer1.jpg",
-      "validation": "previous"
+      "validation": "current"
     },
     {
       "id": 2,

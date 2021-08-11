@@ -36,8 +36,8 @@
                 <td>
                     <mat-form-field class="example-full-width" appearance="fill">
                       <mat-icon matPrefix>category</mat-icon>
-                        <mat-label>Select an option</mat-label>
-                        <mat-select #category name="category" id="category" (selectionChange)="getMovieCategory(category.value)">
+                        <mat-label>Select Filter</mat-label>
+                        <mat-select #category name="category" id="category" (selectionChange)="getMovieCategory(category.value)" [(value)]="selected">
                           <mat-option value="All">All</mat-option>
                           <mat-option value="Upcoming">Upcoming</mat-option>
                           <mat-option value="Now">Now Showing</mat-option>

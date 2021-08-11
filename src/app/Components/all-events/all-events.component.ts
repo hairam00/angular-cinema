@@ -12,6 +12,8 @@ export class AllEventsComponent implements OnInit {
 data: any;
 searchData: any;
 city: string = '';
+selectCity: string = '';
+selectCategory: string = '';
 
   constructor(private restService: RestService, private _snackBar: MatSnackBar, private title: Title) {
     this.title.setTitle('Bookitnow - Events')
@@ -39,6 +41,7 @@ city: string = '';
         if(keys == 0){
           this.openSnackBar("No Event found in "+city, "x");
         }else{
+          this.selectCategory = 'All'
           this.openSnackBar("Found "+ keys + " events in " + city, "x");
         }
       }, error => {
@@ -46,6 +49,7 @@ city: string = '';
       });      
     }else{
       this.getCities();
+      this.selectCategory = 'All'
       this.openSnackBar("All Events", "x");
     }
   }
@@ -58,6 +62,7 @@ city: string = '';
           if(keys == 0){
             this.openSnackBar("No Event found for "+ category, "x");
           }else{
+            this.selectCity = 'All'
             this.openSnackBar("Found "+ keys + " events for " + category, "x");
           }
       },error => {
@@ -65,11 +70,14 @@ city: string = '';
       });
     }else{
       this.getCities();
+      this.selectCity = 'All'
       this.openSnackBar("All Events","x")
     }
   }
   clear(){
     this.getCities();
+    this.selectCity = 'All'
+    this.selectCategory = 'All'
     
   }
 

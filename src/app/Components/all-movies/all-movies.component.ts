@@ -12,6 +12,7 @@ import { RestService } from 'src/app/Services/rest.service';
 export class AllMoviesComponent implements OnInit {
 movies: any;
 hideFilter: boolean = false;
+selected: string = ''
 @ViewChild('category', { static: true }) input: ElementRef | undefined;
   constructor(private router: Router, private restService: RestService, private _snackBar: MatSnackBar, private title: Title) {
     this.title.setTitle('Bookitnow - Movies')
@@ -42,7 +43,7 @@ hideFilter: boolean = false;
   getMovieCategory(release: string){
     if(release == 'All'){
       this.getMovies();
-      this.openSnackBar("ALl Movies","x");
+      this.openSnackBar("All Movies","x");
     }else{
       this.restService.getMovieRelease(release).subscribe(res => {
         this.movies = res;
@@ -63,6 +64,7 @@ hideFilter: boolean = false;
   }
   clear(){
     this.getMovies();
+    this.selected = 'All'
     this.openSnackBar("Showing All Movies", "x");
     let a = this.input?.nativeElement.value;
     a = "All";

@@ -35,7 +35,7 @@
                         <mat-form-field class="example-full-width" appearance="fill">
                             <mat-label>Select Category</mat-label>
                             <mat-icon matPrefix>category</mat-icon>
-                            <mat-select  #category name="category" id="category" (selectionChange)="searchCategory(category.value)">
+                            <mat-select  #category name="category" id="category" (selectionChange)="searchCategory(category.value)" [(value)]="selectCategory">
                               <mat-option value="All">All</mat-option>
                               <mat-option value="FESTIVAL">FESTIVAL</mat-option>
                               <mat-option value="SPORTS">SPORTS</mat-option>
@@ -47,7 +47,7 @@
                         <mat-form-field class="example-full-width" appearance="fill">
                           <mat-icon matPrefix>location_city</mat-icon>
                             <mat-label>Select City</mat-label>
-                            <mat-select  #city name="city" id="city" (selectionChange)="searchCity(city.value)">
+                            <mat-select  #city name="city" id="city" (selectionChange)="searchCity(city.value)" [(value)]="selectCity">
                               <mat-option value="All">All</mat-option>
                               <mat-option value="Lahore">Lahore</mat-option>
                               <mat-option value="Islamabad">Islamabad</mat-option>

@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%;width:100% }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .container{ margin: 5%;}
 a{
@@ -12,7 +12,6 @@ a:hover{
 .view {
     margin: 10px;
     float: left;
-    /* border: 10px solid #fff; */
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -41,7 +40,6 @@ a:hover{
     font-size: 17px;
     font-family: Raleway, serif;
     padding: 10px;
-    /*background: rgba(0, 0, 0, 0.8);*/
     margin: 20px 0 0 0
 }  
 .view p {

@@ -48,6 +48,9 @@ export class DetailViewComponent implements OnInit {
   getMoviesById(){
     this.restService.getMovie(this.movieId).subscribe(resp =>{
       this.data = resp[0];
+      if(this.data == 'undefined' || this.data == undefined){
+        this.router.navigateByUrl('**')
+      }
       this.pageTitle = "Bookitnow - " + this.data.name;
       this.title.setTitle(this.pageTitle as string)
       if(this.data.summary == '' ){
@@ -67,6 +70,9 @@ export class DetailViewComponent implements OnInit {
   getEvensById(){
     this.restService.getEventbyId(this.movieId).subscribe(eventResp => {
       this.data = eventResp[0];
+      if(this.data == 'undefined' || this.data == undefined){
+        this.router.navigateByUrl('**')
+      }
       this.pageTitle = "Bookitnow - " + this.data.name;
       this.title.setTitle(this.pageTitle as string)
       if(this.data.summary == '' ){

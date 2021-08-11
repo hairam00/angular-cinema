@@ -17,6 +17,7 @@ fromDialog: string = '';
 movieData : any;
 selectedTime: string | undefined = '';
 disabled: boolean = true;
+slot:boolean[] = [];
 slot1: boolean = false;
 slot2: boolean = false;
 slot3: boolean = false;
@@ -94,7 +95,7 @@ seats: number = 0;
       }
     } 
   }
-  
+
   toggle(arr:any, value:string){
      this.selectedTime = value;
     if(arr == 'slot1'){

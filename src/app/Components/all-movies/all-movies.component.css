@@ -41,9 +41,6 @@ table{
 table button{
     position: relative;
     left: 30%;
-    top: -30%;
-    height: 200%;
-    padding: 10% 20%;
 }
 carousel{
     z-index: 0;

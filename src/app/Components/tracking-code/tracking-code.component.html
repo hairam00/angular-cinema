@@ -1,16 +1,16 @@
 <h2 mat-dialog-title>TRACK ORDER</h2>
 <mat-dialog-content class="mat-typography">
-        <div class="row" *ngFor="let item of movieData;let i = index">
-            <div class="col-sm">
-              <img *ngIf="item != 'undefined'" src="../../../assets/{{item[0].image}}">
-            </div>
-            <div class="col-sm">
-              <h1>{{item[0].name}}</h1>
-              <p>Ticket For: <strong>{{bookData[i].booking_type}}</strong></p>
-              <p >Seats: <strong>{{bookData[i].seats}}</strong></p>
-              <p>Date: <strong>{{bookData[i].booking_date}}</strong></p>
-              <p *ngIf="bookData[i].booking_type == 'movies'">Time: <strong>{{bookData[i].timings}}</strong></p>
-              <button mat-raised-button color="warn" (click)="delteBooking(bookData[i].id)">Cancel</button>
-            </div>
+    <div class="row" *ngFor="let item of movieData;let i = index">
+        <div class="col-sm">
+          <img *ngIf="item != 'undefined'" src="../../../assets/{{item[0].image}}">
         </div>
+        <div class="col-sm">
+          <h1>{{item[0].name}}</h1>
+          <p>Ticket For: <strong>{{bookData[i].booking_type}}</strong></p>
+          <p >Seats: <strong>{{bookData[i].seats}}</strong></p>
+          <p>Date: <strong>{{bookData[i].booking_date}}</strong></p>
+          <p *ngIf="bookData[i].booking_type == 'movies'">Time: <strong>{{bookData[i].timings}}</strong></p>
+          <button mat-raised-button color="warn" (click)="delteBooking(bookData[i].id)">Cancel<mat-icon>delete</mat-icon></button>
+        </div>
+    </div>
 </mat-dialog-content>

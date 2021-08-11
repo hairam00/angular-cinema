@@ -79,8 +79,9 @@
       </td>
       <td>
         <mat-form-field class="example-full-width" appearance="fill">
+          <mat-icon matPrefix>airline_seat_recline_extra</mat-icon>
           <mat-label>Number of Seats</mat-label>
-          <input matInput type="number" #seats id="seats" />
+          <input matInput type="number" min="1" #seats id="seats" />
         </mat-form-field>
       </td>
       <td>

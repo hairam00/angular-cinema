@@ -42,7 +42,7 @@ export class DetailViewComponent implements OnInit {
       height: '75%',
       width: '50%',
       data: { idMovies: this.movieId, routeParam: this.type }
-    });
+    });  
   }
 
   getMoviesById(){

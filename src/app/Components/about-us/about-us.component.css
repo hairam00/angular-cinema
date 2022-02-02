@@ -13,12 +13,12 @@
     width: 100%;
 }
 .info mat-icon{
-    color: #ca191f;
+    color: #98c67e;
     font-size: 10em;
     margin-left: -40%;
 }
 .spacebar{
-    border: solid 2px #ca191f;
+    border: solid 2px #98c67e;
     width: 80px;
     display: inline-block;
 }

@@ -2,24 +2,24 @@
 <div class="container">
     <ngb-carousel>
         <ng-template ngbSlide >
-          <div class="picsum-img-wrapper" [routerLink]="['/movies', '1' ,'the-conjuring']">
-            <img src="../../../assets/CONJURING-Cover.jpg">
+          <div class="picsum-img-wrapper">
+            <img class="slide" src="../../../assets/slider1.jfif">
           </div>
           <div class="carousel-caption">
             <h3>The Conjuring: The devil made me do it</h3>
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="picsum-img-wrapper" [routerLink]="['/movies', '6' ,'a-quite-place']">
-            <img src="../../../assets/quiteplace.jpg">
+          <div class="picsum-img-wrapper" >
+            <img class="slide" src="../../../assets/slider2.jfif">
           </div>
           <div class="carousel-caption">
             <h3>A QUITE PLACE PART 2</h3>
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="picsum-img-wrapper" [routerLink]="['/movies', '7' ,'black-widow']">
-            <img src="../../../assets/blackwidow.jpg">
+          <div class="picsum-img-wrapper" >
+            <img class="slide" src="../../../assets/Slider3.png">
           </div>
           <div class="carousel-caption">
             <h3>BLACK WIDOW</h3>
@@ -27,32 +27,31 @@
         </ng-template>
       </ngb-carousel>
 </div>
-<!-- POPULAR MOVIES -->
+<!-- POPULAR PRODUCTS -->
 <div class="container">
   <div class="featured-header space-between">
-    <h1>POPULAR MOVIES</h1>
-    <button class="raise" mat-flat-button color="warn" [routerLink]="['/all-movies']" >View All Movies</button>
+    <h1>POPULAR PRODUCTS</h1>
+    <button class="raise primary" mat-flat-button [routerLink]="['/all-products']" >View All Products</button>
   </div> <br>
   <div class="cards">
   <div class="view view-first" *ngFor="let item of data" [routerLink]="['/movies', item.id ,item.name]">
     <img src="../assets/{{item?.image}}">
     <div class="mask">
-      <mat-icon>play_circle_outline</mat-icon>
       <h2>{{item?.name}}</h2>
       <p>{{item?.category}}</p>
-      <button mat-raised-button color="warn">Read More</button>
+      <button mat-raised-button class="primary">Read More</button>
     </div>
   </div>
   </div>
 </div> 
 <!-- Featured events -->
-<section class="featured">
+<!-- <section class="featured">
   <div class="featured container">
     <div class="featured-header space-between">
       <h1>FEATURED EVENTS</h1>
-      <button class="raise" mat-flat-button color="warn" [routerLink]="['/events']">SEE ALL EVENTS</button>
+      <button class="raise" mat-flat-button class="primary" [routerLink]="['/events']">SEE ALL EVENTS</button>
     </div>
-    <div class="cards">
+    <div class="cards" *ngIf="eventData">
       <div class="event-card">
         <img src="../../../assets/{{eventData[0]?.image}}" alt="test-event">
         <p>{{eventData[0].date}} | {{eventData[0].city}}</p>
@@ -67,7 +66,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- partners -->
 <section class="partners">
   <div class="partners-header container">
@@ -117,24 +116,24 @@
 <!-- bookitnow -->
 <section class="bookitnow container">
   <div class="featured-header">
-    <h1>BOOKITNOW.PK</h1>
+    <h1>AGRIMARKETPLACE.PK</h1>
   </div>
   <br>
   <div class="cards">
     <div class="left">
-      <h4>WHAT IS BOOKINOW.PK?</h4>
-      <p>We , Bookitnow.pk , are a team to provide you with your One Stop Entertainment Solution.</p>
-      <button mat-raised-button color="warn" [routerLink]="['/about']">Read More</button>
+      <h4>WHAT IS AGRIMARKETPLACE.PK?</h4>
+      <p>We , agrimarketplace.pk , are a team to provide you with your One Stop Entertainment Solution.</p>
+      <button mat-raised-button class="primary" [routerLink]="['/about']">Read More</button>
     </div>
     <div class="center">
       <h4>WHAT WE DO ?</h4>
       <p>Online portal that has made buying tickets online easy with simple steps without unnecessary frills.</p>
-      <button mat-raised-button color="warn" [routerLink]="['/about']">Read More</button>
+      <button mat-raised-button class="primary" [routerLink]="['/about']">Read More</button>
     </div>
     <div class="right">
-      <h4>BOOKITNOW.PK OFFERS ?</h4>
+      <h4>AGRIMARKETPLACE.PK OFFERS ?</h4>
       <p>Event calendar of events happening all over Pakistan. include all categories.</p>
-      <button mat-raised-button color="warn" [routerLink]="['/offers']">Read More</button>
+      <button mat-raised-button class="primary" [routerLink]="['/offers']">Read More</button>
     </div>
   </div>
 </section>

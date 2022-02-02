@@ -62,7 +62,7 @@ mat-grid-tile img{
     clip-path: polygon(0 0, 100% 0, 73% 100%, 0% 100%);
 }
 .left:hover{
-    background-color: #ca191f;
+    background-color: #98c67e;
     color: white;
     transition: 1s ease-in-out;
 }
@@ -76,7 +76,7 @@ mat-grid-tile img{
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 .center:hover{
-    background-color: #ca191f;
+    background-color: #98c67e;
     color: white;
     transition: 1s ease-in-out;
 }
@@ -87,7 +87,7 @@ mat-grid-tile img{
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 .right:hover{
-    background-color: #ca191f;
+    background-color: #98c67e;
     color: white;
     transition: 1s ease-in-out;
 }
@@ -99,4 +99,8 @@ mat-grid-tile img{
 }
 .img-hover-zoom:hover img {
     transform: scale(1.5);
+}
+.slide{
+    height: 450px;
+    width: 100%;
 }

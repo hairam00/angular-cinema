@@ -13,7 +13,7 @@ import { SignupComponent } from '../signup/signup.component';
 
 export class AboutUsComponent implements OnInit {
   constructor(public dialog: MatDialog, private title: Title) {
-    this.title.setTitle('Bookitnow - About') 
+    this.title.setTitle('Agri Martekplace - About') 
   }
 
   ngOnInit(): void {

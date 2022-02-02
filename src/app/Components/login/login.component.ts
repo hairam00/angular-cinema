@@ -35,7 +35,6 @@ export class LoginComponent implements OnInit {
     });
   }
   getUsername(name:string): void{
-    console.log("getUsername: " + name);
     this.sharedService.getUserName(name);
   }
   login(){

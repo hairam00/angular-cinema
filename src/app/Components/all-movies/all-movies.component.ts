@@ -15,15 +15,15 @@ hideFilter: boolean = false;
 selected: string = ''
 @ViewChild('category', { static: true }) input: ElementRef | undefined;
   constructor(private router: Router, private restService: RestService, private _snackBar: MatSnackBar, private title: Title) {
-    this.title.setTitle('Bookitnow - Movies')
+    this.title.setTitle('Products')
    }
   ngAfterViewInit() {
   }
   ngOnInit(): void {
-    if(this.router.url == '/all-movies/upcoming'){
+    if(this.router.url == '/all-products/upcoming'){
       this.getMovieCategory('Upcoming');
       this.hideFilter = true;
-    }else if(this.router.url == '/all-movies/now-showing'){
+    }else if(this.router.url == '/all-products/now-showing'){
       this.getMovieCategory('Now');
       this.hideFilter = true;
     }else{
@@ -65,7 +65,7 @@ selected: string = ''
   clear(){
     this.getMovies();
     this.selected = 'All'
-    this.openSnackBar("Showing All Movies", "x");
+    this.openSnackBar("Showing All Products", "x");
     let a = this.input?.nativeElement.value;
     a = "All";
   }

@@ -4,9 +4,7 @@ ngb-carousel{
 ngb-carousel img{
     -webkit-filter: brightness(70%);
     filter:brightness(70%);
-}
-ngb-carousel .carousel-caption h3{
-    font-size: 30pt;
+    height: calc(100vh - 150px);
 }
 .picsum-img-wrapper img{
     width: 100%;

@@ -106,3 +106,9 @@ a:hover{
     display: flex;
     justify-content: space-between;  
 }
+.primary{
+    background-color: #98c67e;
+}
+.mat-primary>mat-button-wrapper{
+    color: #98c67e !important;
+}

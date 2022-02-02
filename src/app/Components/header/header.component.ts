@@ -20,23 +20,18 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.sharedService.currentLocation.subscribe((location) => (this.city = location));
     this.sharedService.currentUser.subscribe((user) => (this.user = user));
-    console.warn(localStorage.getItem('username'));
     if(localStorage.getItem('username') != null || localStorage.getItem('username') != ''){
       this.user = localStorage.getItem('username') as string;
-      console.log("User from local storage" + localStorage.getItem('username'));
     }
     if(localStorage.getItem('username') == null || localStorage.getItem('username') == ''){
       this.user = '';
-      console.log("no user in local storage" + localStorage.getItem('username'));
     }
     // location
     if(localStorage.getItem('City') != null || localStorage.getItem('City') != ''){
       this.city = localStorage.getItem('City') as string;
-      console.log("city from local storage" + localStorage.getItem('City'));
     }
     if(localStorage.getItem('City') == null || localStorage.getItem('City') == ''){
       this.city = 'City';
-      console.log("no city in local storage" + localStorage.getItem('City'));
     }
   }
   //snackbar

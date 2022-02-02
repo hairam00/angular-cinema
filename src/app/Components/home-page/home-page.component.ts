@@ -12,7 +12,7 @@ export class HomePageComponent implements OnInit {
   data: any;
   eventData: any;
   constructor(private restService: RestService, private title: Title) {
-    this.title.setTitle('Bookitnow')
+    this.title.setTitle('Agri Marketplace')
    }
 
   ngOnInit(): void {

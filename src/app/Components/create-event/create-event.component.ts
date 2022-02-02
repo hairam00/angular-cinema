@@ -21,7 +21,7 @@ export class CreateEventComponent implements OnInit {
   eventAttribute: any = {};
 
   constructor(private title: Title) {
-    this.title.setTitle('Bookitnow - Create Event')
+    this.title.setTitle('Create Product Request')
    }
 
   ngOnInit(): void {

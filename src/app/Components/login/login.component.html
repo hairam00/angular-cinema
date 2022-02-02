@@ -28,13 +28,13 @@
                 <mat-icon matPrefix>lock</mat-icon>
                 </mat-form-field>
             <p>Forgot your Password???</p>
-            <p>Not a member? <a mat-button color="warn" (click)="signupDialog()">Sign up now</a> </p>
+            <p>Not a member? <button mat-button class="primary" (click)="signupDialog()">Sign up now</button> </p>
           <!-- </form> -->
         <br>
     </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button [mat-dialog-close]="false">Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="warn" type="submit" (click)="login()">Login</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial class="primary" type="submit" (click)="login()">Login</button>
 </mat-dialog-actions>
 </form>

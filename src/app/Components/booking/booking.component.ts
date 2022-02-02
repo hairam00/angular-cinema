@@ -61,7 +61,7 @@ seats: number = 0;
   }
   uploadBooking(date:string, seats:string){
     if(localStorage.getItem('username') == null || localStorage.getItem('username') == ''){
-      this.openSnackBar("Please login to confirm booking","x")
+      this.openSnackBar("Please login to confirm order","x")
       this.dialog.open(LoginComponent);
     }else{
       let data: any = {
@@ -80,7 +80,7 @@ seats: number = 0;
           this.openSnackBar("Please select seats", "x");
         }else{
           this.rest.uploadBooking(data).subscribe();
-          this.openSnackBar(seats+ " Seats booked for "+ date + " at "+ data.timings,"x");
+          this.openSnackBar(seats+ "Order delivered on "+ date,"x");
         }
       }
       if(this.data.routeParam == 'events'){
@@ -90,7 +90,7 @@ seats: number = 0;
           this.openSnackBar("Please select seats", "x");
         }else{
           this.rest.uploadBooking(data).subscribe();
-          this.openSnackBar(seats+ " Seats booked for "+ date ,"x");
+          this.openSnackBar(seats+ "Order delivered on "+ date ,"x");
         }
       }
     } 

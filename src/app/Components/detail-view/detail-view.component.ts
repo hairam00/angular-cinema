@@ -24,13 +24,10 @@ export class DetailViewComponent implements OnInit {
     this.type = this.route.snapshot.params.type;
     if(this.type == 'movies'){
       this.getMoviesById();
-      console.log("dataName: " + this.data) ;
     }
     if(this.type == 'events'){
       this.getEvensById();
-      console.log("dataName: " + this.data) ;
     }
-    
     window.scrollTo(0, 0);
     this.restService.getMovieCarosul(7).subscribe(response => {
       this.carosul = response;
@@ -51,16 +48,16 @@ export class DetailViewComponent implements OnInit {
       if(this.data == 'undefined' || this.data == undefined){
         this.router.navigateByUrl('not-found')
       }
-      this.pageTitle = "Bookitnow - " + this.data.name;
+      this.pageTitle = this.data.name;
       this.title.setTitle(this.pageTitle as string)
       if(this.data.summary == '' ){
-        this.data.summary = 'No synopsis found for this movie yet.';
+        this.data.summary = 'No synopsis found for this product yet.';
       } 
       if(this.data.user_review == '' ){
-        this.data.user_review = 'No users have reviewed this movie yet.';
+        this.data.user_review = 'No users have reviewed this product yet.';
       } 
       if(this.data.critic == ''){
-        this.data.critic = "None of the Critics have reviewed this movie yet.";
+        this.data.critic = "None of the Critics have reviewed this product yet.";
       }
       if(this.data.videos == ''){
         this.data.videos = "No Video Found yet.";

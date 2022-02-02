@@ -1,5 +1,5 @@
 <div class="dialog-heading">
-  <h2 mat-dialog-title>Book Your Ticket</h2>
+  <h2 mat-dialog-title>Book Your Order</h2>
   <button mat-button mat-dialog-close><mat-icon>close</mat-icon></button>
 </div>
 <mat-dialog-content class="mat-typography">
@@ -11,11 +11,11 @@
       <td colspan="2">
         <div class="content">
           <h2>{{ movieData?.name }}</h2>
-          <p><strong>Country :</strong> {{ movieData?.location }}</p>
+          <p><strong>Brand :</strong> {{ movieData?.location }}</p>
           <p><strong>Category :</strong> {{ movieData?.category }}</p>
-          <p><strong>Date :</strong> {{ movieData?.date }}</p>
+          <p><strong>Price :</strong> {{ movieData?.date }}</p>
           <p *ngIf="data.routeParam == 'movies'">
-            <strong>Show Time :</strong>
+            <strong>Size :</strong>
             <input type="button"
               class="time"
               #slot1
@@ -71,7 +71,7 @@
     <tr [ngClass]="{book: data.routeParam == 'events'}">
       <td>
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Choose a date</mat-label>
+          <mat-label>Choose delivery date</mat-label>
           <input matInput [matDatepicker]="picker" #date id="date" />
           <mat-datepicker-toggle
             matSuffix
@@ -82,8 +82,7 @@
       </td>
       <td>
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-icon matPrefix>airline_seat_recline_extra</mat-icon>
-          <mat-label>Number of Seats</mat-label>
+          <mat-label>Quantity</mat-label>
           <input matInput type="number" min="1" #seats id="seats" />
         </mat-form-field>
       </td>
@@ -91,9 +90,9 @@
         <button
           style="margin-left: 2rem"
           mat-raised-button
-          color="primary"
+          class="primary"
           (click)="uploadBooking(date.value, seats.value)">
-          Book Now
+          Order Now
         </button>
       </td>
     </tr>

@@ -41,7 +41,6 @@ export class TrackingCodeComponent implements OnInit {
   }
   delteBooking(id:number){
     this.rest.deleteBooking(id).subscribe(res => {
-      console.log("Order cancel!");
       this.getBookings();
       this.dialog.closeAll();
       this.trackingCode();

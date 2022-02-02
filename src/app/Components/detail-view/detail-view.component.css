@@ -36,7 +36,7 @@ span{
     margin: 2%;
 }
 span:hover{
-    color: #ca191f !important;
+    color: #98c67e !important;
     transition: ease-in-out 0.5s;
 }
 .tabs p, .tabs h1,.tabs span{

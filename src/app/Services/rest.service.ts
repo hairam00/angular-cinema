@@ -16,7 +16,7 @@ export class RestService {
   newsletterUrl : string = "http://localhost:3000/newsletter";
   whatsappUrl : string = "http://localhost:3000/whatsapp";
   contactUrl : string = "http://localhost:3000/contacts";
-  movieUrl: string = "http://localhost:3000/movies";
+  movieUrl: string = "http://localhost:3000/products";
   eventUrl: string = "http://localhost:3000/events";
   bookingUrl: string = "http://localhost:3000/bookings";
   offerUrl: string = "http://localhost:3000/offers";

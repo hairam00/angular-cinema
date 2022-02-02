@@ -41,7 +41,7 @@ export class ContactUsComponent implements OnInit {
     message: ''
   }
   constructor(private restService: RestService, private _snackBar: MatSnackBar, private title: Title) {
-    this.title.setTitle('Bookitnow - Contact us')
+    this.title.setTitle('Contact us')
    }
 
   ngOnInit(): void {

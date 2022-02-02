@@ -1,17 +1,16 @@
 <div  class="cover" style="background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('../../../assets/{{data?.image}}') ;">
-    <mat-icon class="play">play_circle_outline</mat-icon>
+    <!-- <mat-icon class="play">play_circle_outline</mat-icon> -->
     
 </div>
 <div class="dflex">
     <div class="imgbar">
         <img src="../../../assets/{{data?.image}}" >
-        <button mat-raised-button color="warn" (click)="openDialog()" [disabled]="data?.release !='Now'">Book Now</button>
-        <p>Reserve Your Seat Now</p>
+        <button mat-raised-button class="primary" (click)="openDialog()">ORDER Now</button>
     </div>
     <div class="tabs">
         <h1>{{data?.name}}</h1>
         <span>{{data?.location}}</span> <span>{{data?.category}}</span> <br> 
-        <p>Relase Date: {{data?.date}}</p>
+        <p>Price: RS {{data?.date}}</p>
         <mat-tab-group mat-align-tabs="center">
             <mat-tab label="Summary">
                <div class="containers">
@@ -40,7 +39,7 @@
 </div>
 <div class="bg">
     <div class="container">
-        <h1>NOW SHOWING</h1>
+        <h1>HOT PRODUCTS</h1>
         <hr>
         <carousel>
             <div class="carousel-cell" *ngFor="let movie of carosul">
